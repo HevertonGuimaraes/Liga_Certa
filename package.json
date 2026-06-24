@@ -1,0 +1,17 @@
+{
+  "name": "liga-certa",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w @liga-certa/web",
+    "dev:api": "npm run start:dev -w @liga-certa/api",
+    "build:web": "npm run build -w @liga-certa/web",
+    "build:api": "npm run build -w @liga-certa/api",
+    "db:generate": "npm run prisma:generate -w @liga-certa/api",
+    "db:migrate": "npm run prisma:migrate -w @liga-certa/api",
+    "db:studio": "npm run prisma:studio -w @liga-certa/api"
+  }
+}

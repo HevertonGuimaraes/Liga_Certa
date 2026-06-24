@@ -1,0 +1,254 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  ORGANIZER
+  VIEWER
+}
+
+enum ChampionshipStatus {
+  DRAFT
+  ACTIVE
+  FINISHED
+}
+
+enum MatchStatus {
+  SCHEDULED
+  LIVE
+  FINISHED
+  CANCELLED
+}
+
+enum InviteLinkType {
+  CHAMPIONSHIP
+  TEAM
+  FAN
+}
+
+model User {
+  id           String    @id @default(uuid()) @db.Char(36)
+  name         String    @db.VarChar(120)
+  email        String    @unique @db.VarChar(255)
+  passwordHash String    @map("password_hash") @db.VarChar(255)
+  role         UserRole  @default(ORGANIZER)
+  avatarUrl    String?   @map("avatar_url") @db.VarChar(500)
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+  deletedAt    DateTime? @map("deleted_at")
+
+  championships Championship[]
+  settings      Settings?
+
+  @@index([email])
+  @@index([deletedAt])
+  @@map("users")
+}
+
+model Championship {
+  id         String             @id @default(uuid()) @db.Char(36)
+  name       String             @db.VarChar(200)
+  season     String             @db.VarChar(20)
+  bannerUrl  String?            @map("banner_url") @db.VarChar(500)
+  status     ChampionshipStatus @default(DRAFT)
+  startDate  DateTime?          @map("start_date")
+  endDate    DateTime?          @map("end_date")
+  ownerId    String             @map("owner_id") @db.Char(36)
+  createdAt  DateTime           @default(now()) @map("created_at")
+  updatedAt  DateTime           @updatedAt @map("updated_at")
+  deletedAt  DateTime?          @map("deleted_at")
+
+  owner      User         @relation(fields: [ownerId], references: [id])
+  teams      Team[]
+  rounds     Round[]
+  standings  Standing[]
+  inviteLinks InviteLink[]
+
+  @@index([ownerId])
+  @@index([status])
+  @@index([deletedAt])
+  @@map("championships")
+}
+
+model Team {
+  id             String    @id @default(uuid()) @db.Char(36)
+  name           String    @db.VarChar(200)
+  shortName      String    @map("short_name") @db.VarChar(10)
+  shieldUrl      String?   @map("shield_url") @db.VarChar(500)
+  championshipId String    @map("championship_id") @db.Char(36)
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @updatedAt @map("updated_at")
+  deletedAt      DateTime? @map("deleted_at")
+
+  championship   Championship @relation(fields: [championshipId], references: [id])
+  players        Player[]
+  coaches        Coach[]
+  homeMatches    Match[]    @relation("HomeTeam")
+  awayMatches    Match[]    @relation("AwayTeam")
+  standings      Standing[]
+  inviteLinks    InviteLink[]
+
+  @@index([championshipId])
+  @@index([deletedAt])
+  @@map("teams")
+}
+
+model Player {
+  id        String    @id @default(uuid()) @db.Char(36)
+  name      String    @db.VarChar(200)
+  number    Int
+  position  String    @db.VarChar(50)
+  photoUrl  String?   @map("photo_url") @db.VarChar(500)
+  teamId    String    @map("team_id") @db.Char(36)
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
+
+  team  Team   @relation(fields: [teamId], references: [id])
+  goals Goal[]
+
+  @@unique([teamId, number])
+  @@index([teamId])
+  @@index([deletedAt])
+  @@map("players")
+}
+
+model Coach {
+  id        String    @id @default(uuid()) @db.Char(36)
+  name      String    @db.VarChar(200)
+  teamId    String    @map("team_id") @db.Char(36)
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
+
+  team Team @relation(fields: [teamId], references: [id])
+
+  @@index([teamId])
+  @@index([deletedAt])
+  @@map("coaches")
+}
+
+model Round {
+  id             String    @id @default(uuid()) @db.Char(36)
+  number         Int
+  name           String?   @db.VarChar(100)
+  championshipId String    @map("championship_id") @db.Char(36)
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @updatedAt @map("updated_at")
+  deletedAt      DateTime? @map("deleted_at")
+
+  championship Championship @relation(fields: [championshipId], references: [id])
+  matches      Match[]
+
+  @@unique([championshipId, number])
+  @@index([championshipId])
+  @@map("rounds")
+}
+
+model Match {
+  id          String      @id @default(uuid()) @db.Char(36)
+  homeTeamId  String      @map("home_team_id") @db.Char(36)
+  awayTeamId  String      @map("away_team_id") @db.Char(36)
+  homeScore   Int?        @map("home_score")
+  awayScore   Int?        @map("away_score")
+  status      MatchStatus @default(SCHEDULED)
+  scheduledAt DateTime    @map("scheduled_at")
+  roundId     String      @map("round_id") @db.Char(36)
+  createdAt   DateTime    @default(now()) @map("created_at")
+  updatedAt   DateTime    @updatedAt @map("updated_at")
+  deletedAt   DateTime?   @map("deleted_at")
+
+  homeTeam Team  @relation("HomeTeam", fields: [homeTeamId], references: [id])
+  awayTeam Team  @relation("AwayTeam", fields: [awayTeamId], references: [id])
+  round    Round @relation(fields: [roundId], references: [id])
+  goals    Goal[]
+
+  @@index([roundId])
+  @@index([homeTeamId])
+  @@index([awayTeamId])
+  @@index([status])
+  @@index([scheduledAt])
+  @@index([deletedAt])
+  @@map("matches")
+}
+
+model Goal {
+  id        String    @id @default(uuid()) @db.Char(36)
+  minute    Int
+  playerId  String    @map("player_id") @db.Char(36)
+  matchId   String    @map("match_id") @db.Char(36)
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
+
+  player Player @relation(fields: [playerId], references: [id])
+  match  Match  @relation(fields: [matchId], references: [id])
+
+  @@index([playerId])
+  @@index([matchId])
+  @@index([deletedAt])
+  @@map("goals")
+}
+
+model Standing {
+  id             String    @id @default(uuid()) @db.Char(36)
+  teamId         String    @map("team_id") @db.Char(36)
+  championshipId String    @map("championship_id") @db.Char(36)
+  played         Int       @default(0)
+  wins           Int       @default(0)
+  draws          Int       @default(0)
+  losses         Int       @default(0)
+  goalsFor       Int       @default(0) @map("goals_for")
+  goalsAgainst   Int       @default(0) @map("goals_against")
+  points         Int       @default(0)
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @updatedAt @map("updated_at")
+  deletedAt      DateTime? @map("deleted_at")
+
+  team         Team         @relation(fields: [teamId], references: [id])
+  championship Championship @relation(fields: [championshipId], references: [id])
+
+  @@unique([teamId, championshipId])
+  @@index([championshipId])
+  @@index([points])
+  @@map("standings")
+}
+
+model InviteLink {
+  id             String         @id @default(uuid()) @db.Char(36)
+  slug           String         @unique @db.VarChar(100)
+  type           InviteLinkType
+  championshipId String?        @map("championship_id") @db.Char(36)
+  teamId         String?        @map("team_id") @db.Char(36)
+  isActive       Boolean        @default(true) @map("is_active")
+  createdAt      DateTime       @default(now()) @map("created_at")
+  updatedAt      DateTime       @updatedAt @map("updated_at")
+  deletedAt      DateTime?      @map("deleted_at")
+
+  championship Championship? @relation(fields: [championshipId], references: [id])
+  team         Team?         @relation(fields: [teamId], references: [id])
+
+  @@index([slug])
+  @@index([type])
+  @@map("invite_links")
+}
+
+model Settings {
+  id              String    @id @default(uuid()) @db.Char(36)
+  userId          String    @unique @map("user_id") @db.Char(36)
+  emailNotifications Boolean @default(true) @map("email_notifications")
+  theme           String    @default("light") @db.VarChar(20)
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+  deletedAt       DateTime? @map("deleted_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("settings")
+}
