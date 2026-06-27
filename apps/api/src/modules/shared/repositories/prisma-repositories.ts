@@ -135,7 +135,7 @@ export class PrismaGoalRepository implements IGoalRepository {
     });
 
     const players = await Promise.all(
-      goals.map(async (g) => {
+      goals.map(async (g: { playerId: string; _count: { id: number } }) => {
         const player = await this.prisma.player.findUnique({
           where: { id: g.playerId },
           include: { team: true },

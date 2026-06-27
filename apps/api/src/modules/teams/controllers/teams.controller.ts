@@ -26,6 +26,6 @@ export class TeamsController {
 
   @Post()
   create(@Body() dto: CreateTeamDto) {
-    return this.repo.create(dto);
+    return this.repo.create({ ...dto });
   }
 }

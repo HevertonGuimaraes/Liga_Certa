@@ -6,7 +6,10 @@ import {
   PrismaMatchRepository,
   PrismaGoalRepository,
 } from '../repositories/prisma-repositories';
+import { Prisma } from '@prisma/client';
 import { PrismaService } from '../../../infra/prisma/prisma.service';
+
+type StandingWithTeam = Prisma.StandingGetPayload<{ include: { team: true } }>;
 
 @Controller('players')
 @UseGuards(AuthGuard('jwt'))
@@ -53,7 +56,7 @@ export class StandingsController {
       include: { team: true },
       orderBy: [{ points: 'desc' }, { goalsFor: 'desc' }],
     });
-    return standings.map((s) => ({
+    return standings.map((s: StandingWithTeam) => ({
       id: s.id,
       teamId: s.teamId,
       teamName: s.team.name,

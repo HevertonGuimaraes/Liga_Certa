@@ -10,6 +10,6 @@ export class Result<T> {
   }
 
   static fail<T>(error: string): Result<T> {
-    return new Result(false, undefined, error);
+    return new Result<T>(false, undefined, error);
   }
 }

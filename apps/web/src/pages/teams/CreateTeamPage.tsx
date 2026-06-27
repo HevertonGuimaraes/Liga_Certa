@@ -23,7 +23,7 @@ export default function CreateTeamPage() {
     queryFn: () => api.get('/championships').then((r) => r.data),
   });
 
-  const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
+  const { register, handleSubmit } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
 

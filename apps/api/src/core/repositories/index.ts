@@ -1,4 +1,4 @@
-import { User, UserRole } from '../entities/user.entity';
+import { User, UserRole } from '../../modules/users/entities/user.entity';
 
 export interface IUserRepository {
   findById(id: string): Promise<User | null>;
