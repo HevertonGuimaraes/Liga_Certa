@@ -45,21 +45,18 @@ Na raiz do monorepo:
 
 ```bash
 npm install
+npm run setup
 ```
 
-### 3. Configurar variáveis de ambiente
+O comando `npm run setup` cria `apps/api/.env` e `apps/web/.env` a partir dos exemplos (se ainda não existirem).
 
-**Backend** — copie o exemplo e edite com seus dados:
+> **Erro `DATABASE_URL not found`?** Execute `npm run setup` — o arquivo `.env` não vai para o GitHub por segurança.
 
-```bash
-# Windows (PowerShell)
-copy apps\api\.env.example apps\api\.env
+### 3. Configurar variáveis de ambiente (se necessário)
 
-# Linux / macOS
-cp apps/api/.env.example apps/api/.env
-```
+Se quiser alterar senha do MySQL ou JWT, edite os arquivos criados:
 
-Edite `apps/api/.env`:
+**Backend** — `apps/api/.env`:
 
 ```env
 DATABASE_URL="mysql://USUARIO:SENHA@localhost:3306/liga_certa"
@@ -68,17 +65,7 @@ JWT_EXPIRES_IN="7d"
 PORT=3000
 ```
 
-**Frontend** — copie o exemplo:
-
-```bash
-# Windows
-copy apps\web\.env.example apps\web\.env
-
-# Linux / macOS
-cp apps/web/.env.example apps/web/.env
-```
-
-O arquivo `apps/web/.env` já vem com:
+**Frontend** — `apps/web/.env` (já criado pelo setup):
 
 ```env
 VITE_API_URL=http://localhost:3000/api
@@ -149,6 +136,7 @@ Frontend disponível em: http://localhost:5173
 
 | Comando | Descrição |
 |---------|-----------|
+| `npm run setup` | Cria `apps/api/.env` e `apps/web/.env` a partir dos exemplos |
 | `npm run dev:web` | Inicia o frontend em modo desenvolvimento |
 | `npm run dev:api` | Inicia a API NestJS em modo watch |
 | `npm run build:web` | Build de produção do frontend |
