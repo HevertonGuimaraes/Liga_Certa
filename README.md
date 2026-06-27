@@ -178,6 +178,7 @@ Frontend disponível em: http://localhost:5173
 
 ## Documentação adicional
 
+- [Deploy no Railway](docs/DEPLOY-RAILWAY.md)
 - [Auditoria UX/UI](docs/UX-UI-AUDIT.md)
 - [Arquitetura](docs/ARCHITECTURE.md)
 

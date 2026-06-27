@@ -6,7 +6,8 @@
     "apps/*"
   ],
   "devDependencies": {
-    "mysql2": "^3.22.5"
+    "mysql2": "^3.22.5",
+    "serve": "^14.2.4"
   },
   "scripts": {
     "dev:web": "npm run dev -w @liga-certa/web",
@@ -14,9 +15,10 @@
     "build:web": "npm run build -w @liga-certa/web",
     "build:api": "npm run build -w @liga-certa/api",
     "start:api": "npm run start:prod -w @liga-certa/api",
-    "start:web": "npm run preview -w @liga-certa/web -- --host 0.0.0.0 --port ${PORT:-4173}",
+    "start:web": "npx serve apps/web/dist -s --listen tcp://0.0.0.0:${PORT:-4173}",
     "db:generate": "npm run prisma:generate -w @liga-certa/api",
     "db:migrate": "npm run prisma:migrate -w @liga-certa/api",
+    "db:migrate:deploy": "npm run prisma:migrate:deploy -w @liga-certa/api",
     "db:setup": "node scripts/db-setup.mjs",
     "db:setup:docker": "node scripts/db-setup.mjs --docker",
     "db:studio": "npm run prisma:studio -w @liga-certa/api",

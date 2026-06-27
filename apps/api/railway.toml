@@ -1,0 +1,15 @@
+# Config Railway — serviço API
+# No painel: Settings → Config file → /apps/api/railway.toml
+
+[build]
+builder = "RAILPACK"
+buildCommand = "npm install && npm run build:api"
+watchPatterns = [
+  "apps/api/**",
+  "package.json",
+]
+
+[deploy]
+preDeployCommand = "npm run db:migrate:deploy"
+startCommand = "npm run start:api"
+restartPolicyType = "ON_FAILURE"

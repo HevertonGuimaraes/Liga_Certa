@@ -1,0 +1,17 @@
+# Config Railway — serviço Frontend
+# No painel: Settings → Config file → /apps/web/railway.toml
+#
+# IMPORTANTE: VITE_API_URL deve ser definida nas variáveis de ambiente
+# do serviço ANTES do build (Build Variables).
+
+[build]
+builder = "RAILPACK"
+buildCommand = "npm install && npm run build:web"
+watchPatterns = [
+  "apps/web/**",
+  "package.json",
+]
+
+[deploy]
+startCommand = "npm run start:web"
+restartPolicyType = "ON_FAILURE"
