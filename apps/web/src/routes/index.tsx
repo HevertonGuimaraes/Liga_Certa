@@ -1,7 +1,8 @@
 import { lazy } from 'react';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
-import { AppLayout, AuthLayout, ProtectedRoute } from '@/layouts/AppLayout';
+import { AppLayout, ProtectedRoute } from '@/layouts/AppLayout';
 
+const HomePage = lazy(() => import('@/pages/public/HomePage'));
 const LoginPage = lazy(() => import('@/pages/auth/LoginPage'));
 const RegisterPage = lazy(() => import('@/pages/auth/RegisterPage'));
 const ForgotPasswordPage = lazy(() => import('@/pages/auth/ForgotPasswordPage'));
@@ -21,18 +22,11 @@ const SettingsPage = lazy(() => import('@/pages/SettingsPage'));
 const PublicPage = lazy(() => import('@/pages/public/PublicPage'));
 
 export const router = createBrowserRouter([
-  {
-    element: <AuthLayout />,
-    children: [
-      { path: '/login', element: <LoginPage /> },
-      { path: '/register', element: <RegisterPage /> },
-      { path: '/forgot-password', element: <ForgotPasswordPage /> },
-    ],
-  },
-  {
-    path: '/p/:slug',
-    element: <PublicPage />,
-  },
+  { path: '/', element: <HomePage /> },
+  { path: '/login', element: <LoginPage /> },
+  { path: '/register', element: <RegisterPage /> },
+  { path: '/forgot-password', element: <ForgotPasswordPage /> },
+  { path: '/p/:slug', element: <PublicPage /> },
   {
     element: (
       <ProtectedRoute>
@@ -40,7 +34,6 @@ export const router = createBrowserRouter([
       </ProtectedRoute>
     ),
     children: [
-      { path: '/', element: <Navigate to="/dashboard" replace /> },
       { path: '/dashboard', element: <DashboardPage /> },
       { path: '/championships', element: <ChampionshipsPage /> },
       { path: '/championships/new', element: <CreateChampionshipPage /> },
@@ -56,4 +49,5 @@ export const router = createBrowserRouter([
       { path: '/settings', element: <SettingsPage /> },
     ],
   },
+  { path: '*', element: <Navigate to="/" replace /> },
 ]);

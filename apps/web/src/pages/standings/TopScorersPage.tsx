@@ -1,6 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
-import { PageHeader } from '@/components/PageHeader';
-import { EmptyState, LoadingState } from '@/design-system/components';
+import { motion } from 'framer-motion';
+import { AppPageHeader } from '@/layouts/AppLayout';
+import { FigmaEmptyPanel, FigmaErrorBanner, FigmaPanel } from '@/components/layout/FigmaAppUI';
+import { LoadingState } from '@/design-system/components';
 import api from '@/api/client';
 
 interface Scorer {
@@ -16,31 +18,39 @@ export default function TopScorersPage() {
     queryFn: () => api.get<Scorer[]>('/statistics/top-scorers').then((r) => r.data),
   });
 
-  if (isLoading) return <LoadingState />;
-  if (isError) return <div className="text-destructive">Erro ao carregar artilharia.</div>;
+  if (isLoading) return <LoadingState message="Carregando artilharia..." />;
 
   return (
-    <div className="space-y-6">
-      <PageHeader title="Artilharia" />
+    <div>
+      <AppPageHeader title="Artilharia" description="Ranking de goleadores do campeonato." />
+      {isError && <FigmaErrorBanner message="Erro ao carregar artilharia." />}
       {!data?.length ? (
-        <EmptyState title="Sem gols registrados" />
+        <FigmaEmptyPanel title="Sem gols registrados" description="Registre gols nas partidas." />
       ) : (
-        <ol className="divide-y rounded-lg border bg-card">
-          {data.map((s, i) => (
-            <li key={s.playerId} className="flex items-center justify-between px-4 py-3">
-              <div className="flex items-center gap-3">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
-                  {i + 1}
-                </span>
-                <div>
-                  <p className="font-medium">{s.playerName}</p>
-                  <p className="text-sm text-muted-foreground">{s.teamName}</p>
+        <FigmaPanel className="p-0 overflow-hidden">
+          <ol className="divide-y divide-white/10">
+            {data.map((s, i) => (
+              <motion.li
+                key={s.playerId}
+                initial={{ opacity: 0, x: -8 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.04 }}
+                className="flex items-center justify-between px-6 py-5"
+              >
+                <div className="flex items-center gap-4">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-liga-blue font-display text-sm font-bold text-white">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <p className="font-display text-lg font-semibold text-white">{s.playerName}</p>
+                    <p className="font-display text-sm text-white/60">{s.teamName}</p>
+                  </div>
                 </div>
-              </div>
-              <span className="text-lg font-bold">{s.goals}</span>
-            </li>
-          ))}
-        </ol>
+                <span className="font-display text-2xl font-bold text-liga-blue">{s.goals}</span>
+              </motion.li>
+            ))}
+          </ol>
+        </FigmaPanel>
       )}
     </div>
   );

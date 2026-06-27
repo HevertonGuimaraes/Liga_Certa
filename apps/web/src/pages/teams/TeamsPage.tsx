@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
-import { Link } from 'react-router-dom';
-import { Plus } from 'lucide-react';
-import { PageHeader } from '@/components/PageHeader';
-import { Button, EmptyState, LoadingState } from '@/design-system/components';
+import { motion } from 'framer-motion';
+import { AppPageHeader } from '@/layouts/AppLayout';
+import { FigmaErrorBanner, FigmaEmptyPanel, FigmaListCard } from '@/components/layout/FigmaAppUI';
+import { LoadingState } from '@/design-system/components';
 import api from '@/api/client';
 import type { Team } from '@/types';
 
@@ -12,24 +12,36 @@ export default function TeamsPage() {
     queryFn: () => api.get<Team[]>('/teams').then((r) => r.data),
   });
 
-  if (isLoading) return <LoadingState />;
-  if (isError) return <div className="text-destructive">Erro ao carregar times.</div>;
+  if (isLoading) return <LoadingState message="Carregando times..." />;
 
   return (
-    <div className="space-y-6">
-      <PageHeader
+    <div>
+      <AppPageHeader
         title="Times"
-        actions={<Button asChild><Link to="/teams/new"><Plus className="h-4 w-4" /> Novo time</Link></Button>}
+        description="Gerencie os times dos seus campeonatos."
+        actionTo="/teams/new"
+        actionLabel="Novo time"
       />
+      {isError && <FigmaErrorBanner message="Erro ao carregar times." />}
       {!data?.length ? (
-        <EmptyState actionLabel="Criar time" onAction={() => (window.location.href = '/teams/new')} />
+        <FigmaEmptyPanel
+          title="Nenhum time cadastrado"
+          description="Crie seu primeiro time para montar o elenco."
+          actionLabel="Criar time"
+          actionTo="/teams/new"
+        />
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {data.map((t) => (
-            <Link key={t.id} to={`/teams/${t.id}`} className="rounded-lg border bg-card p-5 shadow-sm hover:border-primary">
-              <h3 className="font-semibold">{t.name}</h3>
-              <p className="text-sm text-muted-foreground">{t.shortName}</p>
-            </Link>
+        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {data.map((t, i) => (
+            <motion.div key={t.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }}>
+              <FigmaListCard
+                title={t.name}
+                subtitle={t.shortName}
+                meta="Ver elenco e gestão"
+                actionLabel="Gerenciar →"
+                actionTo={`/teams/${t.id}`}
+              />
+            </motion.div>
           ))}
         </div>
       )}

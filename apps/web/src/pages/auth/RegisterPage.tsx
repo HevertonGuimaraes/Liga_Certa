@@ -2,15 +2,19 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { useMutation } from '@tanstack/react-query';
-import { Button, Input } from '@/design-system/components';
+import { Loader2 } from 'lucide-react';
+import { FigmaAuthShell } from '@/components/layout/FigmaAuthShell';
 import api from '@/api/client';
 
 const schema = z.object({
   name: z.string().min(2, 'Nome obrigatório'),
   email: z.string().email('E-mail inválido'),
   password: z.string().min(6, 'Mínimo 6 caracteres'),
+  confirmPassword: z.string(),
+}).refine((d) => d.password === d.confirmPassword, {
+  message: 'Senhas não conferem',
+  path: ['confirmPassword'],
 });
 
 type FormData = z.infer<typeof schema>;
@@ -22,35 +26,44 @@ export default function RegisterPage() {
   });
 
   const mutation = useMutation({
-    mutationFn: (data: FormData) => api.post('/auth/register', data),
+    mutationFn: (data: FormData) => api.post('/auth/register', { name: data.name, email: data.email, password: data.password }),
     onSuccess: () => navigate('/login'),
   });
 
   return (
-    <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="mx-auto w-full max-w-md">
-      <h2 className="text-2xl font-bold">Criar conta</h2>
-      <p className="mt-2 text-muted-foreground">Cadastre-se no Liga Certa</p>
-      <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="mt-8 space-y-4">
+    <FigmaAuthShell
+      activeTab="register"
+      title="Crie sua conta e faça parte da Liga Certa"
+      subtitle="Preencha os dados abaixo para criar sua conta e começar agora mesmo."
+    >
+      <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="space-y-5">
         <div>
-          <label className="text-sm font-medium">Nome</label>
-          <Input className="mt-1" {...register('name')} state={errors.name ? 'error' : 'default'} />
-          {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name.message}</p>}
+          <label className="font-display text-xl font-semibold text-white sm:text-2xl">Nome completo</label>
+          <input placeholder="Digite seu nome completo" className="liga-input-dark mt-3" {...register('name')} />
+          {errors.name && <p className="mt-2 text-sm text-red-400">{errors.name.message}</p>}
         </div>
         <div>
-          <label className="text-sm font-medium">E-mail</label>
-          <Input className="mt-1" type="email" {...register('email')} state={errors.email ? 'error' : 'default'} />
-          {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email.message}</p>}
+          <label className="font-display text-xl font-semibold text-white sm:text-2xl">E-mail</label>
+          <input type="email" placeholder="Digite seu melhor e-mail" className="liga-input-dark mt-3" {...register('email')} />
+          {errors.email && <p className="mt-2 text-sm text-red-400">{errors.email.message}</p>}
         </div>
         <div>
-          <label className="text-sm font-medium">Senha</label>
-          <Input className="mt-1" type="password" {...register('password')} state={errors.password ? 'error' : 'default'} />
-          {errors.password && <p className="mt-1 text-xs text-destructive">{errors.password.message}</p>}
+          <label className="font-display text-xl font-semibold text-white sm:text-2xl">Senha</label>
+          <input type="password" placeholder="Crie uma senha forte" className="liga-input-dark mt-3" {...register('password')} />
+          {errors.password && <p className="mt-2 text-sm text-red-400">{errors.password.message}</p>}
         </div>
-        <Button type="submit" className="w-full" loading={mutation.isPending}>Cadastrar</Button>
-        <p className="text-center text-sm text-muted-foreground">
-          Já tem conta? <Link to="/login" className="text-primary hover:underline">Entrar</Link>
+        <div>
+          <label className="font-display text-xl font-semibold text-white sm:text-2xl">Confirma a senha</label>
+          <input type="password" placeholder="Confirme sua senha" className="liga-input-dark mt-3" {...register('confirmPassword')} />
+          {errors.confirmPassword && <p className="mt-2 text-sm text-red-400">{errors.confirmPassword.message}</p>}
+        </div>
+        <button type="submit" disabled={mutation.isPending} className="liga-btn-primary w-full disabled:opacity-60">
+          {mutation.isPending ? <Loader2 className="mx-auto h-6 w-6 animate-spin" /> : 'Criar a minha conta'}
+        </button>
+        <p className="text-center font-display text-base text-white/80 sm:text-xl">
+          Já tem uma conta? <Link to="/login" className="text-liga-blue hover:underline">Entrar</Link>
         </p>
       </form>
-    </motion.div>
+    </FigmaAuthShell>
   );
 }

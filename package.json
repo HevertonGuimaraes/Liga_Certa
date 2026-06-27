@@ -5,6 +5,9 @@
   "workspaces": [
     "apps/*"
   ],
+  "devDependencies": {
+    "mysql2": "^3.22.5"
+  },
   "scripts": {
     "dev:web": "npm run dev -w @liga-certa/web",
     "dev:api": "npm run start:dev -w @liga-certa/api",
@@ -14,6 +17,9 @@
     "start:web": "npm run preview -w @liga-certa/web -- --host 0.0.0.0 --port ${PORT:-4173}",
     "db:generate": "npm run prisma:generate -w @liga-certa/api",
     "db:migrate": "npm run prisma:migrate -w @liga-certa/api",
-    "db:studio": "npm run prisma:studio -w @liga-certa/api"
+    "db:setup": "node scripts/db-setup.mjs",
+    "db:setup:docker": "node scripts/db-setup.mjs --docker",
+    "db:studio": "npm run prisma:studio -w @liga-certa/api",
+    "figma:sync": "node scripts/figma-sync.mjs"
   }
 }

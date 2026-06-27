@@ -3,13 +3,18 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useNavigate } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { PageHeader } from '@/components/PageHeader';
-import { Button, Input } from '@/design-system/components';
+import { AppPageHeader } from '@/layouts/AppLayout';
+import {
+  FigmaPanel,
+  FigmaFormField,
+  FigmaInput,
+  FigmaFormActions,
+} from '@/components/layout/FigmaAppUI';
 import api from '@/api/client';
 
 const schema = z.object({
-  name: z.string().min(2),
-  season: z.string().min(4),
+  name: z.string().min(2, 'Nome obrigatório'),
+  season: z.string().min(4, 'Informe a temporada'),
   startDate: z.string().optional(),
   endDate: z.string().optional(),
 });
@@ -32,32 +37,31 @@ export default function CreateChampionshipPage() {
   });
 
   return (
-    <div className="mx-auto max-w-2xl space-y-6">
-      <PageHeader title="Criar campeonato" description="Preencha os dados do novo campeonato" />
-      <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="space-y-4 rounded-lg border bg-card p-6">
-        <div>
-          <label className="text-sm font-medium">Nome</label>
-          <Input className="mt-1" {...register('name')} state={errors.name ? 'error' : 'default'} />
-        </div>
-        <div>
-          <label className="text-sm font-medium">Temporada</label>
-          <Input className="mt-1" placeholder="2026" {...register('season')} />
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label className="text-sm font-medium">Início</label>
-            <Input className="mt-1" type="date" {...register('startDate')} />
+    <div>
+      <AppPageHeader title="Novo Campeonato" description="Preencha os dados para criar sua competição." />
+      <FigmaPanel className="max-w-2xl">
+        <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="space-y-6">
+          <FigmaFormField label="Nome do campeonato" error={errors.name?.message}>
+            <FigmaInput placeholder="Digite o nome do campeonato" {...register('name')} />
+          </FigmaFormField>
+          <FigmaFormField label="Temporada" error={errors.season?.message}>
+            <FigmaInput placeholder="2026" {...register('season')} />
+          </FigmaFormField>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <FigmaFormField label="Data de início">
+              <FigmaInput type="date" {...register('startDate')} />
+            </FigmaFormField>
+            <FigmaFormField label="Data de término">
+              <FigmaInput type="date" {...register('endDate')} />
+            </FigmaFormField>
           </div>
-          <div>
-            <label className="text-sm font-medium">Fim</label>
-            <Input className="mt-1" type="date" {...register('endDate')} />
-          </div>
-        </div>
-        <div className="flex gap-2 pt-2">
-          <Button type="button" variant="outline" onClick={() => navigate(-1)}>Cancelar</Button>
-          <Button type="submit" loading={mutation.isPending}>Salvar</Button>
-        </div>
-      </form>
+          <FigmaFormActions
+            onCancel={() => navigate(-1)}
+            submitLabel="Criar campeonato"
+            loading={mutation.isPending}
+          />
+        </form>
+      </FigmaPanel>
     </div>
   );
 }

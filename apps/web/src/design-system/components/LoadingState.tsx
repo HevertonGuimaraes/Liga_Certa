@@ -9,8 +9,8 @@ interface LoadingStateProps {
 export function LoadingState({ message = 'Carregando...', className }: LoadingStateProps) {
   return (
     <div className={cn('flex flex-col items-center justify-center gap-3 py-12', className)}>
-      <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      <p className="text-sm text-muted-foreground">{message}</p>
+      <Loader2 className="h-8 w-8 animate-spin text-liga-blue" />
+      <p className="text-sm text-white/70">{message}</p>
     </div>
   );
 }

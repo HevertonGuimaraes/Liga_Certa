@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
-import { PageHeader } from '@/components/PageHeader';
-import { EmptyState, LoadingState } from '@/design-system/components';
+import { AppPageHeader } from '@/layouts/AppLayout';
+import { FigmaErrorBanner, FigmaEmptyPanel, FigmaPanel } from '@/components/layout/FigmaAppUI';
+import { LoadingState } from '@/design-system/components';
 import api from '@/api/client';
 import type { Coach } from '@/types';
 
@@ -10,20 +11,25 @@ export default function CoachesPage() {
     queryFn: () => api.get<Coach[]>('/coaches').then((r) => r.data),
   });
 
-  if (isLoading) return <LoadingState />;
-  if (isError) return <div className="text-destructive">Erro ao carregar técnicos.</div>;
+  if (isLoading) return <LoadingState message="Carregando técnicos..." />;
 
   return (
-    <div className="space-y-6">
-      <PageHeader title="Técnicos" />
+    <div>
+      <AppPageHeader title="Técnicos" description="Equipe técnica dos times." />
+      {isError && <FigmaErrorBanner message="Erro ao carregar técnicos." />}
       {!data?.length ? (
-        <EmptyState title="Nenhum técnico cadastrado" />
+        <FigmaEmptyPanel title="Nenhum técnico cadastrado" description="Associe técnicos aos times." actionTo="/teams" actionLabel="Ver times" />
       ) : (
-        <ul className="divide-y rounded-lg border bg-card">
-          {data.map((c) => (
-            <li key={c.id} className="px-4 py-3">{c.name}</li>
-          ))}
-        </ul>
+        <FigmaPanel>
+          <ul className="divide-y divide-white/10">
+            {data.map((c) => (
+              <li key={c.id} className="flex items-center justify-between py-4 font-display text-white">
+                <span className="text-lg font-medium">{c.name}</span>
+                <span className="text-sm text-white/50">Time vinculado</span>
+              </li>
+            ))}
+          </ul>
+        </FigmaPanel>
       )}
     </div>
   );

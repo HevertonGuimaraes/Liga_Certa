@@ -1,0 +1,492 @@
+{
+  "Tela de login": {
+    "size": {
+      "x": 5007,
+      "y": -2934,
+      "width": 1889,
+      "height": 1767
+    },
+    "colors": [
+      {
+        "name": "Tela de login",
+        "type": "FRAME",
+        "color": "#ffffff"
+      },
+      {
+        "name": "Frame 3",
+        "type": "FRAME",
+        "color": "#0793ff"
+      },
+      {
+        "name": "Acessar conta",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Mulish",
+        "size": 24
+      },
+      {
+        "name": "Rectangle 2",
+        "type": "RECTANGLE",
+        "color": "#010b17"
+      },
+      {
+        "name": "Ellipse 17",
+        "type": "ELLIPSE",
+        "color": "#50b6e9"
+      },
+      {
+        "name": "Ellipse 18",
+        "type": "ELLIPSE",
+        "color": "#5abae6"
+      },
+      {
+        "name": "Cabecalho ",
+        "type": "FRAME",
+        "color": "#ffffff"
+      },
+      {
+        "name": "Campeonatos",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 22.925373077392578
+      },
+      {
+        "name": "Frame 48",
+        "type": "INSTANCE",
+        "color": "#0793ff"
+      },
+      {
+        "name": "CADASTRO",
+        "type": "TEXT",
+        "color": "#0793ff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Crie sua conta e faça parte da Liga Certa",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 64
+      },
+      {
+        "name": "Preencha os dados abaixo para criar sua conta e começar agora mesmo.",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 36
+      },
+      {
+        "name": "Rectangle 8",
+        "type": "RECTANGLE",
+        "color": "#010d2c"
+      },
+      {
+        "name": "Rectangle 52",
+        "type": "RECTANGLE",
+        "color": "#17213d"
+      },
+      {
+        "name": "Rectangle 54",
+        "type": "RECTANGLE",
+        "color": "#17213d"
+      },
+      {
+        "name": "Rectangle 55",
+        "type": "RECTANGLE",
+        "color": "#17213d"
+      },
+      {
+        "name": "Criar conta",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Rectangle 53",
+        "type": "RECTANGLE",
+        "color": "#0054ff"
+      },
+      {
+        "name": "Entrar",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "E-mail",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Digite sua senha",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 25
+      },
+      {
+        "name": "Entrar na minha conta",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Esqueci minha senha",
+        "type": "TEXT",
+        "color": "#0793ff",
+        "font": "Montserrat Alternates",
+        "size": 25
+      },
+      {
+        "name": "Ellipse 19",
+        "type": "ELLIPSE",
+        "color": "#50b6e9"
+      },
+      {
+        "name": "Senha",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Digite seu e-mail",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 25
+      },
+      {
+        "name": "← Voltar para o site",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Mulish",
+        "size": 20
+      }
+    ]
+  },
+  "Tela de cadastro": {
+    "size": {
+      "x": 1724,
+      "y": -5589,
+      "width": 1889,
+      "height": 2053
+    },
+    "colors": [
+      {
+        "name": "Tela de cadastro",
+        "type": "FRAME",
+        "color": "#ffffff"
+      },
+      {
+        "name": "Frame 3",
+        "type": "FRAME",
+        "color": "#0793ff"
+      },
+      {
+        "name": "Acessar conta",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Mulish",
+        "size": 24
+      },
+      {
+        "name": "Rectangle 2",
+        "type": "RECTANGLE",
+        "color": "#010b17"
+      },
+      {
+        "name": "Ellipse 17",
+        "type": "ELLIPSE",
+        "color": "#50b6e9"
+      },
+      {
+        "name": "Ellipse 18",
+        "type": "ELLIPSE",
+        "color": "#5abae6"
+      },
+      {
+        "name": "Cabecalho ",
+        "type": "FRAME",
+        "color": "#ffffff"
+      },
+      {
+        "name": "Campeonatos",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 22.925373077392578
+      },
+      {
+        "name": "Frame 48",
+        "type": "INSTANCE",
+        "color": "#0793ff"
+      },
+      {
+        "name": "CADASTRO",
+        "type": "TEXT",
+        "color": "#0793ff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Crie sua conta e faça parte da Liga Certa",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 64
+      },
+      {
+        "name": "Preencha os dados abaixo para criar sua conta e começar agora mesmo.",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 36
+      },
+      {
+        "name": "Rectangle 8",
+        "type": "RECTANGLE",
+        "color": "#010d2c"
+      },
+      {
+        "name": "Rectangle 52",
+        "type": "RECTANGLE",
+        "color": "#17213d"
+      },
+      {
+        "name": "Rectangle 54",
+        "type": "RECTANGLE",
+        "color": "#17213d"
+      },
+      {
+        "name": "Rectangle 55",
+        "type": "RECTANGLE",
+        "color": "#17213d"
+      },
+      {
+        "name": "Rectangle 56",
+        "type": "RECTANGLE",
+        "color": "#17213d"
+      },
+      {
+        "name": "Rectangle 53",
+        "type": "RECTANGLE",
+        "color": "#0054ff"
+      },
+      {
+        "name": "Criar conta",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Entrar",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Nome completo",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Digite seu melhor e-mail",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 25
+      },
+      {
+        "name": "Crie uma senha forte",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 25
+      },
+      {
+        "name": "Criar a minha conta",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Ellipse 19",
+        "type": "ELLIPSE",
+        "color": "#50b6e9"
+      },
+      {
+        "name": "Confirma a senha",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Senha",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "E-mail",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 32
+      },
+      {
+        "name": "Digite seu nome completo",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 25
+      },
+      {
+        "name": "Já tem uma conta? Entrar",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 25
+      },
+      {
+        "name": "← Voltar para o site",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Mulish",
+        "size": 20
+      }
+    ]
+  },
+  "Tela meus campeonatos": {
+    "size": {
+      "x": 6896,
+      "y": -4563,
+      "width": 1889,
+      "height": 994
+    },
+    "colors": [
+      {
+        "name": "Tela meus campeonatos",
+        "type": "FRAME",
+        "color": "#ffffff"
+      },
+      {
+        "name": "Frame 3",
+        "type": "FRAME",
+        "color": "#0793ff"
+      },
+      {
+        "name": "Acessar conta",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Mulish",
+        "size": 16
+      },
+      {
+        "name": "Rectangle 2",
+        "type": "RECTANGLE",
+        "color": "#000822"
+      },
+      {
+        "name": "Ellipse 17",
+        "type": "ELLIPSE",
+        "color": "#50b6e9"
+      },
+      {
+        "name": "Ellipse 18",
+        "type": "ELLIPSE",
+        "color": "#50b6e9"
+      },
+      {
+        "name": "Cabecalho ",
+        "type": "FRAME",
+        "color": "#ffffff"
+      },
+      {
+        "name": "Campeonatos",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 22.925373077392578
+      },
+      {
+        "name": "Frame 48",
+        "type": "INSTANCE",
+        "color": "#0793ff"
+      },
+      {
+        "name": "Meus Campeonatos",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 36
+      },
+      {
+        "name": "Crie e gerencie seus campeonatos esportivos.",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 20
+      },
+      {
+        "name": "Rectangle 11",
+        "type": "RECTANGLE",
+        "color": "#000d2c"
+      },
+      {
+        "name": "Fulano",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Inter",
+        "size": 24
+      },
+      {
+        "name": "Futsal - Grupos + Mata-mata",
+        "type": "TEXT",
+        "color": "#0054ff",
+        "font": "Montserrat Alternates",
+        "size": 16
+      },
+      {
+        "name": "descrição...",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 16
+      },
+      {
+        "name": "17/06/2026 - 20/06/2026",
+        "type": "TEXT",
+        "color": "#ffffff",
+        "font": "Montserrat Alternates",
+        "size": 16
+      },
+      {
+        "name": "Gerenciar",
+        "type": "TEXT",
+        "color": "#0054ff",
+        "font": "Montserrat Alternates",
+        "size": 16
+      },
+      {
+        "name": "Vector 2",
+        "type": "VECTOR",
+        "color": "#d9d9d9"
+      }
+    ]
+  }
+}

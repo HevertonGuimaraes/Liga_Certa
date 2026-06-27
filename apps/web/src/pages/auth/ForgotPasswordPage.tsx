@@ -2,9 +2,9 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { useMutation } from '@tanstack/react-query';
-import { Button, Input } from '@/design-system/components';
+import { Loader2 } from 'lucide-react';
+import { FigmaAuthShell } from '@/components/layout/FigmaAuthShell';
 import api from '@/api/client';
 
 const schema = z.object({ email: z.string().email('E-mail inválido') });
@@ -20,24 +20,30 @@ export default function ForgotPasswordPage() {
   });
 
   return (
-    <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="mx-auto w-full max-w-md">
-      <h2 className="text-2xl font-bold">Recuperar senha</h2>
-      <p className="mt-2 text-muted-foreground">Enviaremos um link para redefinir sua senha</p>
+    <FigmaAuthShell
+      activeTab="login"
+      title="Recuperar senha"
+      subtitle="Informe seu e-mail e enviaremos as instruções para redefinir sua senha."
+    >
       {mutation.isSuccess ? (
-        <p className="mt-8 rounded-md bg-muted p-4 text-sm">Se o e-mail existir, você receberá as instruções.</p>
+        <p className="rounded-xl bg-liga-panel p-6 font-display text-lg text-white/90">
+          Se o e-mail existir, você receberá as instruções em breve.
+        </p>
       ) : (
-        <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="mt-8 space-y-4">
+        <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="space-y-6">
           <div>
-            <label className="text-sm font-medium">E-mail</label>
-            <Input className="mt-1" type="email" {...register('email')} state={errors.email ? 'error' : 'default'} />
-            {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email.message}</p>}
+            <label className="font-display text-xl font-semibold text-white sm:text-2xl">E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail" className="liga-input-dark mt-3" {...register('email')} />
+            {errors.email && <p className="mt-2 text-sm text-red-400">{errors.email.message}</p>}
           </div>
-          <Button type="submit" className="w-full" loading={mutation.isPending}>Enviar link</Button>
+          <button type="submit" disabled={mutation.isPending} className="liga-btn-primary w-full disabled:opacity-60">
+            {mutation.isPending ? <Loader2 className="mx-auto h-6 w-6 animate-spin" /> : 'Enviar link'}
+          </button>
         </form>
       )}
-      <p className="mt-4 text-center text-sm">
-        <Link to="/login" className="text-primary hover:underline">Voltar ao login</Link>
+      <p className="mt-6 text-center font-display text-base text-white/80">
+        <Link to="/login" className="text-liga-blue hover:underline">← Voltar ao login</Link>
       </p>
-    </motion.div>
+    </FigmaAuthShell>
   );
 }

@@ -1,0 +1,3110 @@
+{
+  "syncedAt": "2026-06-27T01:28:24.444Z",
+  "fileKey": "rIdD4kxCwOwptXyIJgLXUI",
+  "fileName": "PROJETO - LIGA CERTA",
+  "focusNodeId": "221:12",
+  "focusNodeName": "homepage",
+  "pages": [
+    {
+      "id": "2:2",
+      "name": "🏠 Home",
+      "frameCount": 46
+    },
+    {
+      "id": "0:1",
+      "name": "🎨 Identidade Visual",
+      "frameCount": 0
+    },
+    {
+      "id": "2:3",
+      "name": "📄 Proposta Comercial",
+      "frameCount": 0
+    }
+  ],
+  "frames": [
+    {
+      "id": "65:727",
+      "name": "Tela - Novo Campeonato",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela - Novo Campeonato",
+      "width": 1440,
+      "height": 1024,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "221:12",
+      "name": "homepage",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / homepage",
+      "width": 1889,
+      "height": 6816,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        },
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "294:32",
+      "name": "Tela de cadastro",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela de cadastro",
+      "width": 1889,
+      "height": 2053,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        },
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "294:589",
+      "name": "Tela de login",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela de login",
+      "width": 1889,
+      "height": 1767,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        },
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "301:651",
+      "name": "Tela meus campeonatos",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela meus campeonatos",
+      "width": 1889,
+      "height": 994,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        },
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "241:253",
+      "name": "Frame 1618872997",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Frame 1618872997",
+      "width": 313,
+      "height": 67,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "221:52",
+      "name": "Frame 4",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Frame 4",
+      "width": 1797,
+      "height": 292,
+      "fills": [],
+      "layoutMode": "HORIZONTAL",
+      "padding": {},
+      "itemSpacing": 143
+    },
+    {
+      "id": "227:365",
+      "name": "Frame 55",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Frame 55",
+      "width": 621,
+      "height": 380,
+      "fills": [],
+      "layoutMode": "VERTICAL",
+      "padding": {},
+      "itemSpacing": 16
+    },
+    {
+      "id": "230:392",
+      "name": "Frame 56",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Frame 56",
+      "width": 704,
+      "height": 747,
+      "fills": [],
+      "layoutMode": "GRID",
+      "padding": {}
+    },
+    {
+      "id": "48:629",
+      "name": "Tela - Atletas",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela - Atletas",
+      "width": 1440,
+      "height": 1024,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "318:226",
+      "name": "Tela - Bem-vindo",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela - Bem-vindo",
+      "width": 1440,
+      "height": 1024,
+      "fills": [
+        {
+          "color": "#010d28",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "318:411",
+      "name": "Tela - Configuração",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela - Configuração",
+      "width": 1440,
+      "height": 1024,
+      "fills": [
+        {
+          "color": "#010d28",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "62:543",
+      "name": "Tela - Novo Campeonato",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela - Novo Campeonato",
+      "width": 1440,
+      "height": 1024,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "65:626",
+      "name": "Tela - Novo Campeonato",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela - Novo Campeonato",
+      "width": 1440,
+      "height": 1024,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "40:236",
+      "name": "Tela - Times",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela - Times",
+      "width": 1440,
+      "height": 1131,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "139:504",
+      "name": "Artilharia",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Artilharia",
+      "width": 1440,
+      "height": 1131,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "183:7",
+      "name": "Artilharia",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Artilharia",
+      "width": 1440,
+      "height": 1131,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "142:701",
+      "name": "Link para o time",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Link para o time",
+      "width": 1440,
+      "height": 975,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "142:1047",
+      "name": "Link para o time 2",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Link para o time 2",
+      "width": 1440,
+      "height": 975,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "142:1353",
+      "name": "Link para o time 3",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Link para o time 3",
+      "width": 1440,
+      "height": 975,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "162:7",
+      "name": "Link para o time 4",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Link para o time 4",
+      "width": 1440,
+      "height": 975,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "167:7",
+      "name": "Link para o time 5",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Link para o time 5",
+      "width": 1440,
+      "height": 975,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "142:796",
+      "name": "Adicionar mais atletas",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Adicionar mais atletas",
+      "width": 1440,
+      "height": 1247,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "142:1112",
+      "name": "Adicionar mais atletas 2",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Adicionar mais atletas 2",
+      "width": 1440,
+      "height": 1247,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "142:1417",
+      "name": "Adicionar mais atletas 3",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Adicionar mais atletas 3",
+      "width": 1440,
+      "height": 1247,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "162:64",
+      "name": "Adicionar mais atletas 4",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Adicionar mais atletas 4",
+      "width": 1440,
+      "height": 1247,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "167:64",
+      "name": "Adicionar mais atletas 5",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Adicionar mais atletas 5",
+      "width": 1440,
+      "height": 1247,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "142:949",
+      "name": "Adicionar mais atletas",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Adicionar mais atletas",
+      "width": 1440,
+      "height": 1391,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "142:1272",
+      "name": "Adicionar mais  2",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Adicionar mais  2",
+      "width": 1440,
+      "height": 1391,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "142:1496",
+      "name": "Adicionar mais  3",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Adicionar mais  3",
+      "width": 1440,
+      "height": 1391,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "162:143",
+      "name": "Adicionar mais  4",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Adicionar mais  4",
+      "width": 1440,
+      "height": 1391,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "167:143",
+      "name": "Adicionar mais  5",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Adicionar mais  5",
+      "width": 1440,
+      "height": 1391,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "55:39",
+      "name": "Tela - Partidas",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela - Partidas",
+      "width": 1440,
+      "height": 1024,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "55:144",
+      "name": "Tela - Classificação",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela - Classificação",
+      "width": 1440,
+      "height": 1024,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "47:461",
+      "name": "Tela - Novo Time",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Tela - Novo Time",
+      "width": 1440,
+      "height": 1024,
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ],
+      "padding": {}
+    },
+    {
+      "id": "123:272",
+      "name": "Frame 43",
+      "type": "COMPONENT_SET",
+      "path": "🏠 Home / 🏠 Home / Frame 43",
+      "width": 118,
+      "height": 156,
+      "fills": [],
+      "padding": {},
+      "cornerRadius": 5
+    },
+    {
+      "id": "123:298",
+      "name": "Frame 44",
+      "type": "COMPONENT_SET",
+      "path": "🏠 Home / 🏠 Home / Frame 44",
+      "width": 254,
+      "height": 156,
+      "fills": [],
+      "padding": {},
+      "cornerRadius": 5
+    },
+    {
+      "id": "123:309",
+      "name": "Frame 45",
+      "type": "COMPONENT_SET",
+      "path": "🏠 Home / 🏠 Home / Frame 45",
+      "width": 254,
+      "height": 156,
+      "fills": [],
+      "padding": {},
+      "cornerRadius": 5
+    },
+    {
+      "id": "123:314",
+      "name": "Frame 46",
+      "type": "COMPONENT_SET",
+      "path": "🏠 Home / 🏠 Home / Frame 46",
+      "width": 254,
+      "height": 156,
+      "fills": [],
+      "padding": {},
+      "cornerRadius": 5
+    },
+    {
+      "id": "123:322",
+      "name": "Frame 47",
+      "type": "COMPONENT_SET",
+      "path": "🏠 Home / 🏠 Home / Frame 47",
+      "width": 254,
+      "height": 156,
+      "fills": [],
+      "padding": {},
+      "cornerRadius": 5
+    },
+    {
+      "id": "123:330",
+      "name": "Frame 48",
+      "type": "COMPONENT_SET",
+      "path": "🏠 Home / 🏠 Home / Frame 48",
+      "width": 254,
+      "height": 156,
+      "fills": [],
+      "padding": {},
+      "cornerRadius": 5
+    },
+    {
+      "id": "223:330",
+      "name": "Frame 46",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Frame 46",
+      "width": 2571,
+      "height": 211,
+      "fills": [],
+      "padding": {}
+    },
+    {
+      "id": "230:745",
+      "name": "Frame 1618872984",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Frame 1618872984",
+      "width": 202,
+      "height": 41,
+      "fills": [],
+      "padding": {}
+    },
+    {
+      "id": "230:750",
+      "name": "Frame 1321314601",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Frame 1321314601",
+      "width": 224,
+      "height": 112,
+      "fills": [],
+      "layoutMode": "VERTICAL",
+      "padding": {}
+    },
+    {
+      "id": "230:596",
+      "name": "Frame 1618872983",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / Frame 1618872983",
+      "width": 264,
+      "height": 25,
+      "fills": [],
+      "layoutMode": "HORIZONTAL",
+      "padding": {}
+    },
+    {
+      "id": "241:306",
+      "name": "10503810_4474734 1",
+      "type": "FRAME",
+      "path": "🏠 Home / 🏠 Home / 10503810_4474734 1",
+      "width": 750,
+      "height": 500,
+      "fills": [],
+      "padding": {}
+    }
+  ],
+  "focusFrame": {
+    "id": "221:12",
+    "name": "homepage",
+    "type": "FRAME",
+    "path": "FOCUS / homepage",
+    "width": 1889,
+    "height": 6816,
+    "fills": [
+      {
+        "color": "#ffffff",
+        "opacity": 1
+      },
+      {
+        "color": "#ffffff",
+        "opacity": 1
+      }
+    ],
+    "padding": {}
+  },
+  "focusTexts": [
+    {
+      "id": "221:27",
+      "name": "Acessar conta",
+      "characters": "Acessar conta",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 28,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "I221:19;123:269",
+      "name": "Inicio",
+      "characters": "Inicio",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 22.925373077392578,
+        "fontWeight": 500,
+        "lineHeight": 26.746267318725586,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "I221:20;123:300",
+      "name": "características",
+      "characters": "características",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 22.925373077392578,
+        "fontWeight": 500,
+        "lineHeight": 26.746267318725586,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:21",
+      "name": "Campeonatos",
+      "characters": "Campeonatos",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 22.925373077392578,
+        "fontWeight": 600,
+        "lineHeight": 26.746267318725586,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "I221:22;123:316",
+      "name": "Planos",
+      "characters": "Planos",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 22.925373077392578,
+        "fontWeight": 500,
+        "lineHeight": 26.746267318725586,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "I221:23;123:324",
+      "name": "Fale conosco",
+      "characters": "Fale conosco",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 22.925373077392578,
+        "fontWeight": 500,
+        "lineHeight": 26.746267318725586,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "I221:24;123:332",
+      "name": "Acessar conta",
+      "characters": "Acessar conta",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 22.925373077392578,
+        "fontWeight": 500,
+        "lineHeight": 26.746267318725586,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:30",
+      "name": "Organize seus torneios sem papelzinho!",
+      "characters": "Organize seus torneios sem papelzinho!",
+      "typography": {
+        "fontFamily": "Montserrat",
+        "fontSize": 80,
+        "fontWeight": 500,
+        "lineHeight": 85,
+        "letterSpacing": -5
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:32",
+      "name": "Crie sua competição, gerencie times e atletas, registre resultados, acompanhe estatísticas e muito mais. Tudo em um só lugar!",
+      "characters": "Crie sua competição, gerencie times e atletas, registre resultados, acompanhe es",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 40,
+        "fontWeight": 500,
+        "lineHeight": 54,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:34",
+      "name": "Criar um torneio",
+      "characters": "Criar um torneio",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 36,
+        "fontWeight": 700,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:37",
+      "name": "Saiba mais",
+      "characters": "Saiba mais",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 36,
+        "fontWeight": 700,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:90",
+      "name": "Campeonatos em destaques",
+      "characters": "Campeonatos em destaques",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 64,
+        "fontWeight": 800,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:92",
+      "name": "Confira os campeonatos criados na Liga Certa e acompanhe os resultados.",
+      "characters": "Confira os campeonatos criados na Liga Certa e acompanhe os resultados.",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 36,
+        "fontWeight": 500,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:99",
+      "name": "Campeonato",
+      "characters": "Campeonato",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 28,
+        "fontWeight": 800,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#295fcc",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:100",
+      "name": "Futsal • Grupos + Mata-mata",
+      "characters": "Futsal • Grupos + Mata-mata",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 20,
+        "fontWeight": 600,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#4e4e4e",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:101",
+      "name": "17/06/2026 - 20/06/2026",
+      "characters": "17/06/2026 - 20/06/2026",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 20,
+        "fontWeight": 600,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#4e4e4e",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "234:863",
+      "name": "Torneio",
+      "characters": "Torneio",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 28,
+        "fontWeight": 800,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#295fcc",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "234:865",
+      "name": "Futebol • Grupos + Mata-mata",
+      "characters": "Futebol • Grupos + Mata-mata",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 20,
+        "fontWeight": 600,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#4e4e4e",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "234:866",
+      "name": "17/06/2026 - 20/06/2026",
+      "characters": "17/06/2026 - 20/06/2026",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 20,
+        "fontWeight": 600,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#4e4e4e",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "234:875",
+      "name": "Racha",
+      "characters": "Racha",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 28,
+        "fontWeight": 800,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#295fcc",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "234:877",
+      "name": "Terrão • Grupos + Mata-mata",
+      "characters": "Terrão • Grupos + Mata-mata",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 20,
+        "fontWeight": 600,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#4e4e4e",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "234:878",
+      "name": "17/06/2026 - 20/06/2026",
+      "characters": "17/06/2026 - 20/06/2026",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 20,
+        "fontWeight": 600,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#4e4e4e",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:230",
+      "name": "Digite o nome do campeonato",
+      "characters": "Digite o nome do campeonato",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 36,
+        "fontWeight": 400,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#585757",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:232",
+      "name": "ENCONTRAR",
+      "characters": "ENCONTRAR",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 36,
+        "fontWeight": 800,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:248",
+      "name": "Reviews",
+      "characters": "Reviews",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 40,
+        "fontWeight": 700,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#0793ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:249",
+      "name": "NOSSOS CLIENTES APROVAM!",
+      "characters": "NOSSOS CLIENTES APROVAM!\n",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 64,
+        "fontWeight": 900,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:250",
+      "name": "Organizadores de campeonatos de todo o Brasil usam o Competições Certa para diversos esportes.",
+      "characters": "Organizadores de campeonatos de todo o Brasil usam o Competições Certa para dive",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 40,
+        "fontWeight": 300,
+        "lineHeight": 40,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:258",
+      "name": "\"Uso o Liga Certa há mais de um ano e não consigo mais imaginar gerenciar um campeonato sem ele. Antes, eu perdia horas com tabelas e cálculos.\"",
+      "characters": "\"Uso o Liga Certa há mais de um ano e não consigo mais imaginar gerenciar um cam",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 18,
+        "fontWeight": 300,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:260",
+      "name": "c",
+      "characters": "c",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#0054ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:261",
+      "name": "Carlos M.",
+      "characters": "Carlos M.",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:269",
+      "name": "\"Com o Liga Certa tudo ficou muito mais prático. Crio um campeonato em poucos minutos e o sistema gera as tabelas automaticamente.\"",
+      "characters": "\"Com o Liga Certa tudo ficou muito mais prático. Crio um campeonato em poucos mi",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 18,
+        "fontWeight": 300,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:271",
+      "name": "J",
+      "characters": "J",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#0054ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:272",
+      "name": "Juliana R",
+      "characters": "Juliana R",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:280",
+      "name": "\"Várias funcionalidades tornam a gestão mais eficiente: mensagens para os times, registro de punições e suspensões. Recomendo demais.\" ",
+      "characters": "\"Várias funcionalidades tornam a gestão mais eficiente: mensagens para os times,",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 18,
+        "fontWeight": 300,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:282",
+      "name": "M",
+      "characters": "M",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#0054ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:283",
+      "name": "Marcos T.",
+      "characters": "Marcos T.",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:291",
+      "name": "\"Ferramenta essencial para quem organiza campeonatos. Ganho tempo e tranquilidade para focar nas outras questões do meu evento esportivo.\"",
+      "characters": "\"Ferramenta essencial para quem organiza campeonatos. Ganho tempo e tranquilidad",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 18,
+        "fontWeight": 300,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:293",
+      "name": "P",
+      "characters": "P",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#0054ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:294",
+      "name": "Patrícia L",
+      "characters": "Patrícia L",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:298",
+      "name": "O jeito mais fácil de criar e gerenciar campeonatos esportivos.",
+      "characters": "O jeito mais fácil de criar e gerenciar campeonatos esportivos.",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 700,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:299",
+      "name": "© 2026 Liga Certa. Todos os direitos reservados.",
+      "characters": "© 2026 Liga Certa. Todos os direitos reservados.",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:300",
+      "name": "MENU",
+      "characters": "MENU",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 900,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:301",
+      "name": "ULTILIDADES",
+      "characters": "ULTILIDADES",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 900,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:302",
+      "name": "CONTATOS",
+      "characters": "CONTATOS",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 900,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:303",
+      "name": "Início",
+      "characters": "Início",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 400,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:304",
+      "name": "Ver competições",
+      "characters": "Ver competições",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 400,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:305",
+      "name": "suporte@ligacerta.com",
+      "characters": "suporte@ligacerta.com",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 400,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:306",
+      "name": "Características",
+      "characters": "Características",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 400,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:307",
+      "name": "Criar conta",
+      "characters": "Criar conta",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 400,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:308",
+      "name": "Whatsapp",
+      "characters": "Whatsapp",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 400,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:309",
+      "name": "Campeonatos",
+      "characters": "Campeonatos",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 400,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:310",
+      "name": "Acessar conta",
+      "characters": "Acessar conta",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 400,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:311",
+      "name": "Planos",
+      "characters": "Planos",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 400,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:312",
+      "name": "Fale conosco",
+      "characters": "Fale conosco",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 25,
+        "fontWeight": 400,
+        "lineHeight": 25,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:433",
+      "name": "Súmula das partidas",
+      "characters": "Súmula das partidas",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 28.831079483032227,
+        "fontWeight": 700,
+        "lineHeight": 27.9439697265625,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ebf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:435",
+      "name": "Imprima o relatório de cada jogo do seu torneio",
+      "characters": "Imprima o relatório de cada jogo do seu torneio",
+      "typography": {
+        "fontFamily": "DM Sans",
+        "fontSize": 17.742202758789062,
+        "fontWeight": 400,
+        "lineHeight": 24.839082717895508,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#d1efff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:699",
+      "name": "Súmula - Jogo 03",
+      "characters": "Súmula - Jogo 03",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 17.55305290222168,
+        "fontWeight": 700,
+        "lineHeight": 20.478561401367188,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:453",
+      "name": "heading",
+      "characters": "Tudo para organizar seu torneio!",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 35.484405517578125,
+        "fontWeight": 700,
+        "lineHeight": 46.57328414916992,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ebf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:455",
+      "name": "Gerencie campeonatos, publique tabelas, resultados, fotos e vídeos para que atletas e torcedores acompanhem tudo em tempo real.",
+      "characters": "Gerencie campeonatos, publique tabelas, resultados, fotos e vídeos para que atle",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 19.959978103637695,
+        "fontWeight": 400,
+        "lineHeight": 33.26662826538086,
+        "letterSpacing": -0.2772219181060791
+      },
+      "fills": [
+        {
+          "color": "#d1efff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:569",
+      "name": "Torneio Liga Certa",
+      "characters": "Torneio Liga Certa",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 27.943967819213867,
+        "fontWeight": 700,
+        "lineHeight": 46.57328414916992,
+        "letterSpacing": -0.3881106674671173
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:576",
+      "name": "RVL",
+      "characters": "RVL",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 17.783889770507812,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:577",
+      "name": "X",
+      "characters": "X",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 31.61580467224121,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#295fcc",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:580",
+      "name": "VVC",
+      "characters": "VVC",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 17.783889770507812,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:612",
+      "name": "BFK",
+      "characters": "BFK",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 17.783889770507812,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:613",
+      "name": "X",
+      "characters": "X",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 31.61580467224121,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#295fcc",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:618",
+      "name": "ECB",
+      "characters": "ECB",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 17.783889770507812,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:624",
+      "name": "ADE",
+      "characters": "ADE",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 17.783889770507812,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:625",
+      "name": "X",
+      "characters": "X",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 31.61580467224121,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#295fcc",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:630",
+      "name": "PHX",
+      "characters": "PHX",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 17.783889770507812,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:636",
+      "name": "FRA",
+      "characters": "FRA",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 17.783889770507812,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:637",
+      "name": "X",
+      "characters": "X",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 31.61580467224121,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#295fcc",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:642",
+      "name": "REA",
+      "characters": "REA",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 17.783889770507812,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:669",
+      "name": "GRUPO A",
+      "characters": "GRUPO A",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 19.959978103637695,
+        "fontWeight": 700,
+        "lineHeight": 38.81106948852539,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#295fcc",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:668",
+      "name": "REAL VILLE FC",
+      "characters": "REAL VILLE FC",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 13.306652069091797,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:673",
+      "name": "VIVACE FC",
+      "characters": "VIVACE FC",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 13.306652069091797,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:677",
+      "name": "BISTEKA FC",
+      "characters": "BISTEKA FC",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 13.306652069091797,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:681",
+      "name": "ESPORTE CLUBE BRASIL",
+      "characters": "ESPORTE CLUBE BRASIL",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 13.306652069091797,
+        "fontWeight": 700,
+        "lineHeight": 29.639816284179688,
+        "letterSpacing": -0.24699847400188446
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:464",
+      "name": "Gestão de equipe",
+      "characters": "Gestão de equipe",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 31.04885482788086,
+        "fontWeight": 700,
+        "lineHeight": 27.9439697265625,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ebf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:466",
+      "name": "Cadastre e gerencie a equipe de apoio do seu torneio.",
+      "characters": "Cadastre e gerencie a equipe de apoio do seu torneio.",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 17.742202758789062,
+        "fontWeight": 400,
+        "lineHeight": 24.839082717895508,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#d1efff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:484",
+      "name": "heading",
+      "characters": "Estatísticas em tempo real",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 31.04885482788086,
+        "fontWeight": 700,
+        "lineHeight": 46.57328414916992,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ebf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:485",
+      "name": "Acompanhe o desempenho de jogadores e equipes instantaneamente. Dados precisos e atualizados segundo a segundo para análises táticas e controle total de cada partida.",
+      "characters": "Acompanhe o desempenho de jogadores e equipes instantaneamente. Dados precisos e",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 22.177753448486328,
+        "fontWeight": 400,
+        "lineHeight": 39.91995620727539,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#d1efff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:487",
+      "name": "Artilheiros",
+      "characters": "Artilheiros",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 19.959978103637695,
+        "fontWeight": 500,
+        "lineHeight": 22.177753448486328,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#021124",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:494",
+      "name": "Neymar Jr",
+      "characters": "Neymar Jr",
+      "typography": {
+        "fontFamily": "DM Sans",
+        "fontSize": 15.52442741394043,
+        "fontWeight": 400,
+        "lineHeight": 15.52442741394043,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#121212",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:503",
+      "name": "Ronaldo Nazário",
+      "characters": "Ronaldo Nazário",
+      "typography": {
+        "fontFamily": "DM Sans",
+        "fontSize": 15.52442741394043,
+        "fontWeight": 400,
+        "lineHeight": 15.52442741394043,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:512",
+      "name": "Edson Arantes do Nascimento",
+      "characters": "Edson Arantes do Nascimento",
+      "typography": {
+        "fontFamily": "DM Sans",
+        "fontSize": 15.52442741394043,
+        "fontWeight": 400,
+        "lineHeight": 15.52442741394043,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#000000",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:519",
+      "name": "Resumo do jogo",
+      "characters": "Resumo do jogo",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 26.613304138183594,
+        "fontWeight": 500,
+        "lineHeight": 44.355506896972656,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#383838",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:527",
+      "name": "Ashley Cooper",
+      "characters": "Ashley Cooper",
+      "typography": {
+        "fontFamily": "DM Sans",
+        "fontSize": 22.177753448486328,
+        "fontWeight": 400,
+        "lineHeight": 28.875436782836914,
+        "letterSpacing": -0.5544438362121582
+      },
+      "fills": [
+        {
+          "color": "#ebf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:530",
+      "name": "$500",
+      "characters": "$500",
+      "typography": {
+        "fontFamily": "DM Sans",
+        "fontSize": 13.306652069091797,
+        "fontWeight": 500,
+        "lineHeight": 15.52442741394043,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ebf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:531",
+      "name": "$600",
+      "characters": "$600",
+      "typography": {
+        "fontFamily": "DM Sans",
+        "fontSize": 13.306652069091797,
+        "fontWeight": 500,
+        "lineHeight": 15.52442741394043,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ebf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:533",
+      "name": "$700",
+      "characters": "$700",
+      "typography": {
+        "fontFamily": "DM Sans",
+        "fontSize": 13.306652069091797,
+        "fontWeight": 500,
+        "lineHeight": 15.52442741394043,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#021124",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:534",
+      "name": "Others",
+      "characters": "Others",
+      "typography": {
+        "fontFamily": "DM Sans",
+        "fontSize": 13.306652069091797,
+        "fontWeight": 500,
+        "lineHeight": 15.52442741394043,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ebf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:539",
+      "name": "finance recipt_download.Pdf",
+      "characters": "finance recipt_download.Pdf",
+      "typography": {
+        "fontFamily": "DM Sans",
+        "fontSize": 15.52442741394043,
+        "fontWeight": 400,
+        "lineHeight": 15.52442741394043,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ebf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:544",
+      "name": "Sign up",
+      "characters": "Assinar agora",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 19.959978103637695,
+        "fontWeight": 600,
+        "lineHeight": 24.331212997436523,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#021124",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:545",
+      "name": "Gerador automático de partidas",
+      "characters": "Gerador automático de partidas",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 53.22660827636719,
+        "fontWeight": 700,
+        "lineHeight": 79.83991241455078,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ebf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "230:546",
+      "name": "Cadastre times, sorteie grupos e já monte as fases do seu torneio. Nossa ferramenta constrói partidas de forma inteligente, sem que você precise se preocupar com sorteios ou frequências.",
+      "characters": "Cadastre times, sorteie grupos e já monte as fases do seu torneio. Nossa ferrame",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24.39552879333496,
+        "fontWeight": 400,
+        "lineHeight": 39.91995620727539,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#d1efff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:91",
+      "name": "Nossos planos",
+      "characters": "Nossos planos",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 64,
+        "fontWeight": 800,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#021124",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:93",
+      "name": "Temos planos na medida certa para o seu bolso!",
+      "characters": "Temos planos na medida certa para o seu bolso!",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 36,
+        "fontWeight": 500,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#021124",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:120",
+      "name": "Mensal",
+      "characters": "Mensal",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 32,
+        "fontWeight": 800,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:121",
+      "name": "Trimestal",
+      "characters": "Trimestal",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 32,
+        "fontWeight": 800,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:122",
+      "name": "Semestral",
+      "characters": "Semestral",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 32,
+        "fontWeight": 800,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:123",
+      "name": "Anual",
+      "characters": "Anual",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 32,
+        "fontWeight": 800,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:134",
+      "name": "BAIRRO",
+      "characters": "BAIRRO",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 48,
+        "fontWeight": 700,
+        "lineHeight": 32,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:136",
+      "name": "R$ 0/mês",
+      "characters": "R$ 0/mês",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 90.53658294677734,
+        "fontWeight": 800,
+        "lineHeight": 45.26829147338867,
+        "letterSpacing": -1.414634108543396
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:127",
+      "name": "3 patrocinadores por campeonato",
+      "characters": "3 patrocinadores por campeonato",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:126",
+      "name": "300 jogadores por campeonato",
+      "characters": "300 jogadores por campeonato",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:129",
+      "name": "3 Campeonatos ativos",
+      "characters": "3 Campeonatos ativos",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:131",
+      "name": "Modelos de Súmulas",
+      "characters": "Modelos de Súmulas",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:128",
+      "name": "Sem propagandas",
+      "characters": "Sem propagandas",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:130",
+      "name": "URL personalizada",
+      "characters": "URL personalizada",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:132",
+      "name": "Arquivos de anexo",
+      "characters": "Arquivos de anexo",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:133",
+      "name": "Imprimir relatórios",
+      "characters": "Imprimir relatórios",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:146",
+      "name": "Assinar plano",
+      "characters": "Assinar plano",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 36,
+        "fontWeight": 700,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:85",
+      "name": "CIDADE",
+      "characters": "CIDADE",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 48,
+        "fontWeight": 700,
+        "lineHeight": 32,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:86",
+      "name": "R$ 32/mês",
+      "characters": "R$ 32/mês",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 90.53658294677734,
+        "fontWeight": 800,
+        "lineHeight": 45.26829147338867,
+        "letterSpacing": -1.414634108543396
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:89",
+      "name": "Tudo do plano BAIRRO",
+      "characters": "Tudo do plano BAIRRO",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 700,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:137",
+      "name": "6 patrocinadores por campeonato",
+      "characters": "6 patrocinadores por campeonato",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:93",
+      "name": "600 jogadores por campeonato",
+      "characters": "600 jogadores por campeonato",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:156",
+      "name": "6 Campeonatos ativos",
+      "characters": "6 Campeonatos ativos",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:181",
+      "name": "Assinar plano",
+      "characters": "Assinar plano",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 36,
+        "fontWeight": 700,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:159",
+      "name": "NAÇÃO",
+      "characters": "NAÇÃO",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 48,
+        "fontWeight": 700,
+        "lineHeight": 32,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:160",
+      "name": "R$ 40/mês",
+      "characters": "R$ 40/mês",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 90.53658294677734,
+        "fontWeight": 800,
+        "lineHeight": 45.26829147338867,
+        "letterSpacing": -1.414634108543396
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:163",
+      "name": "Tudo do plano CIDADE",
+      "characters": "Tudo do plano CIDADE",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 700,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:165",
+      "name": "12 patrocinadores por campeonato",
+      "characters": "12 patrocinadores por campeonato",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:167",
+      "name": "1200 jogadores por campeonato",
+      "characters": "1200 jogadores por campeonato",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:169",
+      "name": "Campeonatos Ilimitados",
+      "characters": "Campeonatos Ilimitados",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 24,
+        "fontWeight": 500,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:184",
+      "name": "Assinar plano",
+      "characters": "Assinar plano",
+      "typography": {
+        "fontFamily": "Mulish",
+        "fontSize": 36,
+        "fontWeight": 700,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:235",
+      "name": "Está com dúvidas?",
+      "characters": "Está com dúvidas?",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 40,
+        "fontWeight": 700,
+        "lineHeight": 24,
+        "letterSpacing": -1
+      },
+      "fills": [
+        {
+          "color": "#57aef5",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:236",
+      "name": "Fale com a nossa equipe!",
+      "characters": "Fale com a nossa equipe!",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 96,
+        "fontWeight": 900,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:237",
+      "name": "Vamos responder o mais rápido possível.",
+      "characters": "Vamos responder o mais rápido possível.",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 32,
+        "fontWeight": 700,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "221:239",
+      "name": "Conversar pelo whatsapp",
+      "characters": "Conversar pelo whatsapp",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 30,
+        "fontWeight": 700,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      },
+      "fills": [
+        {
+          "color": "#ffffff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:252",
+      "name": "⚽️ Torneio inicia amanhã!",
+      "characters": "⚽️ Torneio inicia amanhã!",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ecf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:266",
+      "name": "📋 Novo atleta inscrito",
+      "characters": "📋 Novo atleta inscrito",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ecf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:268",
+      "name": "🏟 Novo local de Jogo",
+      "characters": "🏟 Novo local de Jogo",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ecf7ff",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "id": "241:270",
+      "name": "🏆 É Campeão!",
+      "characters": "🏆 É Campeão!",
+      "typography": {
+        "fontFamily": "Montserrat Alternates",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 64,
+        "letterSpacing": -0.25
+      },
+      "fills": [
+        {
+          "color": "#ecf7ff",
+          "opacity": 1
+        }
+      ]
+    }
+  ],
+  "styles": [],
+  "lastModified": "2026-06-26T21:14:46Z"
+}

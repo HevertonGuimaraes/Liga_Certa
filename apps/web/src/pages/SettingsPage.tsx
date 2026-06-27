@@ -1,6 +1,11 @@
 import { useForm } from 'react-hook-form';
-import { PageHeader } from '@/components/PageHeader';
-import { Button, Input } from '@/design-system/components';
+import { AppPageHeader } from '@/layouts/AppLayout';
+import {
+  FigmaPanel,
+  FigmaFormField,
+  FigmaInput,
+  FigmaFormActions,
+} from '@/components/layout/FigmaAppUI';
 
 export default function SettingsPage() {
   const { register, handleSubmit } = useForm({
@@ -8,23 +13,23 @@ export default function SettingsPage() {
   });
 
   return (
-    <div className="mx-auto max-w-2xl space-y-6">
-      <PageHeader title="Configurações" description="Preferências da sua conta" />
-      <form onSubmit={handleSubmit(() => {})} className="space-y-4 rounded-lg border bg-card p-6">
-        <div>
-          <label className="text-sm font-medium">Nome</label>
-          <Input className="mt-1" {...register('name')} />
-        </div>
-        <div>
-          <label className="text-sm font-medium">E-mail</label>
-          <Input className="mt-1" type="email" {...register('email')} />
-        </div>
-        <label className="flex items-center gap-2 text-sm">
-          <input type="checkbox" {...register('notifications')} />
-          Receber notificações por e-mail
-        </label>
-        <Button type="submit">Salvar alterações</Button>
-      </form>
+    <div>
+      <AppPageHeader title="Configuração" description="Preferências da sua conta Liga Certa." />
+      <FigmaPanel className="max-w-2xl">
+        <form onSubmit={handleSubmit(() => {})} className="space-y-6">
+          <FigmaFormField label="Nome">
+            <FigmaInput placeholder="Seu nome completo" {...register('name')} />
+          </FigmaFormField>
+          <FigmaFormField label="E-mail">
+            <FigmaInput type="email" placeholder="seu@email.com" {...register('email')} />
+          </FigmaFormField>
+          <label className="flex items-center gap-3 font-display text-white/80">
+            <input type="checkbox" className="h-5 w-5 rounded accent-liga-blue" {...register('notifications')} />
+            Receber notificações por e-mail
+          </label>
+          <FigmaFormActions onCancel={() => window.history.back()} submitLabel="Salvar alterações" />
+        </form>
+      </FigmaPanel>
     </div>
   );
 }

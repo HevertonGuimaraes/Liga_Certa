@@ -1,7 +1,17 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { PageHeader } from '@/components/PageHeader';
-import { LoadingState, Badge } from '@/design-system/components';
+import { AppPageHeader } from '@/layouts/AppLayout';
+import {
+  FigmaPanel,
+  FigmaErrorBanner,
+  FigmaEmptyPanel,
+  FigmaTable,
+  FigmaTableHead,
+  FigmaTableBody,
+  FigmaTableRow,
+  FigmaTableCell,
+} from '@/components/layout/FigmaAppUI';
+import { LoadingState } from '@/design-system/components';
 import api from '@/api/client';
 
 export default function TeamManagementPage() {
@@ -12,26 +22,67 @@ export default function TeamManagementPage() {
     enabled: !!id,
   });
 
-  if (isLoading) return <LoadingState />;
-  if (isError || !data) return <div className="text-destructive">Time não encontrado.</div>;
+  if (isLoading) return <LoadingState message="Carregando time..." />;
+  if (isError || !data) {
+    return (
+      <div>
+        <AppPageHeader title="Gestão do time" />
+        <FigmaErrorBanner message="Time não encontrado." />
+      </div>
+    );
+  }
 
   return (
-    <div className="space-y-6">
-      <PageHeader title={data.name} description={`Sigla: ${data.shortName}`} />
-      <div className="rounded-lg border bg-card p-6">
-        <h3 className="font-semibold mb-4">Elenco</h3>
-        {data.players?.length ? (
-          <ul className="divide-y">
-            {data.players.map((p: { id: string; name: string; number: number; position: string }) => (
-              <li key={p.id} className="flex items-center justify-between py-3">
-                <span>{p.number} — {p.name}</span>
-                <Badge variant="outline">{p.position}</Badge>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="text-sm text-muted-foreground">Nenhum atleta cadastrado.</p>
-        )}
+    <div>
+      <AppPageHeader
+        title={data.name}
+        description={`Sigla: ${data.shortName} — Gerencie elenco e técnicos.`}
+        actionTo="/players"
+        actionLabel="Ver todos atletas"
+      />
+      <div className="grid gap-6 lg:grid-cols-2">
+        <FigmaPanel>
+          <h3 className="font-display text-xl font-semibold text-white">Elenco</h3>
+          {!data.players?.length ? (
+            <div className="mt-4">
+              <FigmaEmptyPanel title="Nenhum atleta" description="Cadastre atletas para este time." />
+            </div>
+          ) : (
+            <FigmaTable>
+              <FigmaTableHead>
+                <FigmaTableCell header>#</FigmaTableCell>
+                <FigmaTableCell header>Nome</FigmaTableCell>
+                <FigmaTableCell header>Posição</FigmaTableCell>
+              </FigmaTableHead>
+              <FigmaTableBody>
+                {data.players.map((p: { id: string; name: string; number: number; position: string }) => (
+                  <FigmaTableRow key={p.id}>
+                    <FigmaTableCell>{p.number}</FigmaTableCell>
+                    <FigmaTableCell className="font-semibold">{p.name}</FigmaTableCell>
+                    <FigmaTableCell className="text-liga-blue">{p.position}</FigmaTableCell>
+                  </FigmaTableRow>
+                ))}
+              </FigmaTableBody>
+            </FigmaTable>
+          )}
+        </FigmaPanel>
+        <FigmaPanel>
+          <h3 className="font-display text-xl font-semibold text-white">Técnicos</h3>
+          {!data.coaches?.length ? (
+            <p className="mt-4 font-display text-white/60">Nenhum técnico cadastrado.</p>
+          ) : (
+            <ul className="mt-4 space-y-3">
+              {data.coaches.map((c: { id: string; name: string }) => (
+                <li key={c.id} className="rounded-xl bg-liga-navy-deep/60 px-4 py-3 font-display text-white">
+                  {c.name}
+                </li>
+              ))}
+            </ul>
+          )}
+          <Link to="/coaches" className="mt-6 inline-block font-display text-sm font-semibold text-liga-blue hover:underline">
+            Gerenciar técnicos →
+          </Link>
+        </FigmaPanel>
       </div>
     </div>
   );

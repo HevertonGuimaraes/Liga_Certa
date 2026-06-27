@@ -3,14 +3,20 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useNavigate } from 'react-router-dom';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { PageHeader } from '@/components/PageHeader';
-import { Button, Input } from '@/design-system/components';
+import { AppPageHeader } from '@/layouts/AppLayout';
+import {
+  FigmaPanel,
+  FigmaFormField,
+  FigmaInput,
+  FigmaSelect,
+  FigmaFormActions,
+} from '@/components/layout/FigmaAppUI';
 import api from '@/api/client';
 
 const schema = z.object({
   name: z.string().min(2),
   shortName: z.string().min(2).max(5),
-  championshipId: z.string().uuid(),
+  championshipId: z.string().uuid('Selecione um campeonato'),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -23,7 +29,7 @@ export default function CreateTeamPage() {
     queryFn: () => api.get('/championships').then((r) => r.data),
   });
 
-  const { register, handleSubmit } = useForm<FormData>({
+  const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
 
@@ -36,28 +42,27 @@ export default function CreateTeamPage() {
   });
 
   return (
-    <div className="mx-auto max-w-2xl space-y-6">
-      <PageHeader title="Criar time" />
-      <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="space-y-4 rounded-lg border bg-card p-6">
-        <div>
-          <label className="text-sm font-medium">Nome</label>
-          <Input className="mt-1" {...register('name')} />
-        </div>
-        <div>
-          <label className="text-sm font-medium">Sigla</label>
-          <Input className="mt-1" maxLength={5} {...register('shortName')} />
-        </div>
-        <div>
-          <label className="text-sm font-medium">Campeonato</label>
-          <select className="mt-1 flex h-10 w-full rounded-md border border-input bg-background px-3 text-sm" {...register('championshipId')}>
-            <option value="">Selecione...</option>
-            {championships?.map((c: { id: string; name: string }) => (
-              <option key={c.id} value={c.id}>{c.name}</option>
-            ))}
-          </select>
-        </div>
-        <Button type="submit" loading={mutation.isPending}>Salvar</Button>
-      </form>
+    <div>
+      <AppPageHeader title="Novo Time" description="Cadastre um novo time no campeonato." />
+      <FigmaPanel className="max-w-2xl">
+        <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="space-y-6">
+          <FigmaFormField label="Nome do time" error={errors.name?.message}>
+            <FigmaInput placeholder="Nome completo do time" {...register('name')} />
+          </FigmaFormField>
+          <FigmaFormField label="Sigla" error={errors.shortName?.message}>
+            <FigmaInput placeholder="ABC" maxLength={5} {...register('shortName')} />
+          </FigmaFormField>
+          <FigmaFormField label="Campeonato" error={errors.championshipId?.message}>
+            <FigmaSelect {...register('championshipId')}>
+              <option value="">Selecione o campeonato...</option>
+              {championships?.map((c: { id: string; name: string }) => (
+                <option key={c.id} value={c.id}>{c.name}</option>
+              ))}
+            </FigmaSelect>
+          </FigmaFormField>
+          <FigmaFormActions onCancel={() => navigate(-1)} submitLabel="Salvar time" loading={mutation.isPending} />
+        </form>
+      </FigmaPanel>
     </div>
   );
 }

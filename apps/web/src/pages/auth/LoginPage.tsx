@@ -2,9 +2,9 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { useMutation } from '@tanstack/react-query';
-import { Button, Input } from '@/design-system/components';
+import { Loader2 } from 'lucide-react';
+import { FigmaAuthShell } from '@/components/layout/FigmaAuthShell';
 import api from '@/api/client';
 
 const schema = z.object({
@@ -29,28 +29,45 @@ export default function LoginPage() {
   });
 
   return (
-    <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="mx-auto w-full max-w-md">
-      <h2 className="text-2xl font-bold">Entrar</h2>
-      <p className="mt-2 text-muted-foreground">Acesse sua conta Liga Certa</p>
-      <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="mt-8 space-y-4">
+    <FigmaAuthShell
+      activeTab="login"
+      title="Bem-vindo de volta!"
+      subtitle="Entre com seu e-mail e senha para acessar seus campeonatos."
+    >
+      <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="space-y-6">
         <div>
-          <label className="text-sm font-medium">E-mail</label>
-          <Input className="mt-1" type="email" {...register('email')} state={errors.email ? 'error' : 'default'} />
-          {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email.message}</p>}
+          <label className="font-display text-xl font-semibold text-white sm:text-2xl">E-mail</label>
+          <input
+            type="email"
+            placeholder="Digite seu e-mail"
+            className="liga-input-dark mt-3"
+            {...register('email')}
+          />
+          {errors.email && <p className="mt-2 text-sm text-red-400">{errors.email.message}</p>}
         </div>
         <div>
-          <label className="text-sm font-medium">Senha</label>
-          <Input className="mt-1" type="password" {...register('password')} state={errors.password ? 'error' : 'default'} />
-          {errors.password && <p className="mt-1 text-xs text-destructive">{errors.password.message}</p>}
+          <label className="font-display text-xl font-semibold text-white sm:text-2xl">Senha</label>
+          <input
+            type="password"
+            placeholder="Digite sua senha"
+            className="liga-input-dark mt-3"
+            {...register('password')}
+          />
+          {errors.password && <p className="mt-2 text-sm text-red-400">{errors.password.message}</p>}
         </div>
         <div className="flex justify-end">
-          <Link to="/forgot-password" className="text-sm text-primary hover:underline">Esqueci minha senha</Link>
+          <Link to="/forgot-password" className="font-display text-base text-liga-blue hover:underline sm:text-xl">
+            Esqueci minha senha
+          </Link>
         </div>
-        <Button type="submit" className="w-full" loading={mutation.isPending}>Entrar</Button>
-        <p className="text-center text-sm text-muted-foreground">
-          Não tem conta? <Link to="/register" className="text-primary hover:underline">Cadastre-se</Link>
+        <button type="submit" disabled={mutation.isPending} className="liga-btn-primary w-full disabled:opacity-60">
+          {mutation.isPending ? <Loader2 className="mx-auto h-6 w-6 animate-spin" /> : 'Entrar na minha conta'}
+        </button>
+        <p className="text-center font-display text-base text-white/80 sm:text-xl">
+          Não tem conta?{' '}
+          <Link to="/register" className="text-liga-blue hover:underline">Criar conta</Link>
         </p>
       </form>
-    </motion.div>
+    </FigmaAuthShell>
   );
 }

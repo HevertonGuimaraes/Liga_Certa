@@ -84,26 +84,39 @@ O arquivo `apps/web/.env` já vem com:
 VITE_API_URL=http://localhost:3000/api
 ```
 
-### 4. Criar o banco de dados MySQL
+### 4. Criar banco e schema (MySQL)
 
-No MySQL, execute:
+**Opção recomendada** — script automatizado na raiz do projeto:
+
+```bash
+# MySQL já rodando (local ou Docker)
+npm run db:setup
+
+# Sobe o MySQL via Docker Compose e aplica tudo
+npm run db:setup:docker
+```
+
+O script:
+1. Cria o banco `liga_certa` (utf8mb4), se ainda não existir
+2. Gera o Prisma Client
+3. Aplica as migrations (`prisma migrate deploy`)
+
+**Alternativa manual** — no MySQL:
 
 ```sql
 CREATE DATABASE liga_certa CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
-### 5. Gerar o Prisma Client e rodar migrations
-
-Na raiz do projeto:
+Depois:
 
 ```bash
 npm run db:generate
 npm run db:migrate
 ```
 
-Na primeira migration, informe um nome (ex.: `init`) quando solicitado.
+Na primeira migration interativa, informe um nome (ex.: `init`) quando solicitado.
 
-### 6. Subir a aplicação
+### 5. Subir a aplicação
 
 Abra **dois terminais** na raiz do projeto:
 
@@ -123,7 +136,7 @@ npm run dev:web
 
 Frontend disponível em: http://localhost:5173
 
-### 7. Primeiro acesso
+### 6. Primeiro acesso
 
 1. Acesse http://localhost:5173/register
 2. Crie uma conta
@@ -140,8 +153,10 @@ Frontend disponível em: http://localhost:5173
 | `npm run dev:api` | Inicia a API NestJS em modo watch |
 | `npm run build:web` | Build de produção do frontend |
 | `npm run build:api` | Build de produção da API |
+| `npm run db:setup` | Cria o banco MySQL e aplica o schema (migrations) |
+| `npm run db:setup:docker` | Sobe MySQL no Docker + cria banco e schema |
 | `npm run db:generate` | Gera o Prisma Client |
-| `npm run db:migrate` | Executa migrations no banco |
+| `npm run db:migrate` | Executa migrations no banco (modo dev) |
 | `npm run db:studio` | Abre o Prisma Studio (GUI do banco) |
 
 ---
