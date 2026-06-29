@@ -3,7 +3,7 @@
         "api": {
             "root": "apps/api",
             "entrypoint": "src/main.ts",
-            "routePrefix": "/_/api",
+            "routePrefix": "/api",
             "buildCommand": "npm install && npm run build"
         },
         "web": {
