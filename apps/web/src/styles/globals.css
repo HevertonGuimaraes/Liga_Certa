@@ -73,4 +73,9 @@
   .liga-card-championship {
     @apply rounded-2xl bg-[#000d2c] p-6 text-white shadow-lg;
   }
+
+  .liga-footer-wave {
+    background: linear-gradient(180deg, transparent 0%, #0793ff 40%, #0054ff 100%);
+    clip-path: ellipse(80% 100% at 50% 100%);
+  }
 }
