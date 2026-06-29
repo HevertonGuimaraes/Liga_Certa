@@ -4,13 +4,14 @@
             "root": "apps/api",
             "entrypoint": "src/main.ts",
             "routePrefix": "/_/api",
-            "buildCommand": "npm install && npm run build:api"
+            "buildCommand": "npm install && npm run build"
         },
         "web": {
             "root": "apps/web",
             "routePrefix": "/",
             "framework": "vite",
-            "buildCommand": "npm install && npm run build:web"
+            "buildCommand": "npm install && npm run build"
         }
     }
 }
+
