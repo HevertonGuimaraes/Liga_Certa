@@ -1,0 +1,15 @@
+{
+    "experimentalServices": {
+        "api": {
+            "root": "apps/api",
+            "routePrefix": "/_/api",
+            "buildCommand": "npm install && npm run build:api"
+        },
+        "web": {
+            "root": "apps/web",
+            "routePrefix": "/",
+            "framework": "vite",
+            "buildCommand": "npm install && npm run build:web"
+        }
+    }
+}
