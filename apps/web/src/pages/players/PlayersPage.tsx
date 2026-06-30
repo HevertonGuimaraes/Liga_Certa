@@ -9,12 +9,15 @@ import {
   FigmaTableBody,
   FigmaTableRow,
   FigmaTableCell,
+  FigmaRowActions,
 } from '@/components/layout/FigmaAppUI';
 import { LoadingState } from '@/design-system/components';
+import { useDeleteItem } from '@/hooks/useDeleteItem';
 import api from '@/api/client';
 import type { Player } from '@/types';
 
 export default function PlayersPage() {
+  const deleteMutation = useDeleteItem(['players'], '/players');
   const { data, isLoading, isError } = useQuery({
     queryKey: ['players'],
     queryFn: () => api.get<Player[]>('/players').then((r) => r.data),
@@ -45,6 +48,7 @@ export default function PlayersPage() {
               <FigmaTableCell header>Nome</FigmaTableCell>
               <FigmaTableCell header className="text-center">Número</FigmaTableCell>
               <FigmaTableCell header>Posição</FigmaTableCell>
+              <FigmaTableCell header className="text-right">Ações</FigmaTableCell>
             </FigmaTableHead>
             <FigmaTableBody>
               {data.map((p) => (
@@ -52,6 +56,15 @@ export default function PlayersPage() {
                   <FigmaTableCell className="font-semibold">{p.name}</FigmaTableCell>
                   <FigmaTableCell className="text-center">{p.number}</FigmaTableCell>
                   <FigmaTableCell className="text-liga-blue">{p.position}</FigmaTableCell>
+                  <FigmaTableCell>
+                    <FigmaRowActions
+                      editTo={`/players/${p.id}/edit`}
+                      onDelete={() => {
+                        if (confirm(`Excluir atleta "${p.name}"?`)) deleteMutation.mutate(p.id);
+                      }}
+                      deleting={deleteMutation.isPending}
+                    />
+                  </FigmaTableCell>
                 </FigmaTableRow>
               ))}
             </FigmaTableBody>

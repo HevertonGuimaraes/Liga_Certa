@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Trophy, Search } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
@@ -85,22 +86,26 @@ export function FeaturedChampionshipsSection() {
         ) : (
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {data.map((item, i) => (
-              <motion.article
-                key={item.id}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="rounded-2xl border border-white bg-white p-6 shadow-md"
-              >
-                <h3 className="font-display text-2xl font-extrabold text-liga-accent">{item.name}</h3>
-                <p className="mt-2 font-display text-base font-semibold text-liga-muted">
-                  Temporada {item.season} • {statusLabel(item.status)}
-                </p>
-                <p className="mt-1 font-display text-base font-semibold text-liga-muted">
-                  {formatDates(item.startDate, item.endDate)}
-                </p>
-              </motion.article>
+              <Link key={item.id} to={`/p/${item.slug}`}>
+                <motion.article
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className="block rounded-2xl border border-white bg-white p-6 shadow-md transition hover:ring-2 hover:ring-liga-blue/40"
+                >
+                  <h3 className="font-display text-2xl font-extrabold text-liga-accent">{item.name}</h3>
+                  <p className="mt-2 font-display text-base font-semibold text-liga-muted">
+                    Temporada {item.season} • {statusLabel(item.status)}
+                  </p>
+                  <p className="mt-1 font-display text-base font-semibold text-liga-muted">
+                    {formatDates(item.startDate, item.endDate)}
+                  </p>
+                  <span className="mt-4 inline-block font-display text-sm font-bold text-liga-blue">
+                    Ver campeonato →
+                  </span>
+                </motion.article>
+              </Link>
             ))}
           </div>
         )}

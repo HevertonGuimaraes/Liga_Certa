@@ -1,8 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { AppPageHeader } from '@/layouts/AppLayout';
-import { FigmaBadge, FigmaEmptyPanel, FigmaErrorBanner, FigmaPanel } from '@/components/layout/FigmaAppUI';
+import { FigmaBadge, FigmaEmptyPanel, FigmaErrorBanner, FigmaPanel, FigmaRowActions } from '@/components/layout/FigmaAppUI';
 import { LoadingState } from '@/design-system/components';
+import { useDeleteItem } from '@/hooks/useDeleteItem';
 import api from '@/api/client';
 import type { Match } from '@/types';
 
@@ -13,11 +14,12 @@ function statusVariant(status: Match['status']) {
 }
 
 function statusLabel(status: Match['status']) {
-  const map = { SCHEDULED: 'Agendada', LIVE: 'Ao vivo', FINISHED: 'Finalizada' };
+  const map = { SCHEDULED: 'Agendada', LIVE: 'Ao vivo', FINISHED: 'Finalizada', CANCELLED: 'Cancelada' };
   return map[status] ?? status;
 }
 
 export default function MatchesPage() {
+  const deleteMutation = useDeleteItem(['matches'], '/matches');
   const { data, isLoading, isError } = useQuery({
     queryKey: ['matches'],
     queryFn: () => api.get<Match[]>('/matches').then((r) => r.data),
@@ -27,16 +29,29 @@ export default function MatchesPage() {
 
   return (
     <div>
-      <AppPageHeader title="Partidas" description="Agenda e resultados dos jogos." />
+      <AppPageHeader
+        title="Partidas"
+        description="Agenda e resultados dos jogos."
+        actionTo="/matches/new"
+        actionLabel="Nova partida"
+      />
       {isError && <FigmaErrorBanner message="Erro ao carregar partidas." />}
       {!data?.length ? (
-        <FigmaEmptyPanel title="Nenhuma partida agendada" description="Cadastre partidas no campeonato." />
+        <FigmaEmptyPanel
+          title="Nenhuma partida agendada"
+          description="Cadastre partidas no campeonato."
+          actionTo="/matches/new"
+          actionLabel="Cadastrar partida"
+        />
       ) : (
         <div className="space-y-4">
           {data.map((m, i) => (
             <motion.div key={m.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }}>
               <FigmaPanel className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
+                  <p className="font-display text-lg font-semibold text-white">
+                    {m.homeTeam?.name ?? 'Mandante'} <span className="text-white/40">×</span> {m.awayTeam?.name ?? 'Visitante'}
+                  </p>
                   <p className="font-display text-2xl font-bold text-white">
                     {m.homeScore ?? '-'} <span className="text-white/40">×</span> {m.awayScore ?? '-'}
                   </p>
@@ -44,7 +59,16 @@ export default function MatchesPage() {
                     {new Date(m.scheduledAt).toLocaleString('pt-BR')}
                   </p>
                 </div>
-                <FigmaBadge variant={statusVariant(m.status)}>{statusLabel(m.status)}</FigmaBadge>
+                <div className="flex flex-col items-end gap-3">
+                  <FigmaBadge variant={statusVariant(m.status)}>{statusLabel(m.status)}</FigmaBadge>
+                  <FigmaRowActions
+                    editTo={`/matches/${m.id}/edit`}
+                    onDelete={() => {
+                      if (confirm('Excluir esta partida?')) deleteMutation.mutate(m.id);
+                    }}
+                    deleting={deleteMutation.isPending}
+                  />
+                </div>
               </FigmaPanel>
             </motion.div>
           ))}

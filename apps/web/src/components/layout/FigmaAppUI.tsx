@@ -208,3 +208,32 @@ export function FigmaBadge({ children, variant = 'default' }: { children: React.
     </span>
   );
 }
+
+export function FigmaRowActions({
+  editTo,
+  onDelete,
+  deleting,
+}: {
+  editTo: string;
+  onDelete: () => void;
+  deleting?: boolean;
+}) {
+  return (
+    <div className="flex items-center justify-end gap-2">
+      <Link
+        to={editTo}
+        className="rounded-lg border border-white/20 px-3 py-1.5 font-display text-xs font-semibold text-white transition hover:bg-white/10"
+      >
+        Editar
+      </Link>
+      <button
+        type="button"
+        onClick={onDelete}
+        disabled={deleting}
+        className="rounded-lg border border-red-500/40 px-3 py-1.5 font-display text-xs font-semibold text-red-300 transition hover:bg-red-500/10 disabled:opacity-50"
+      >
+        {deleting ? '...' : 'Excluir'}
+      </button>
+    </div>
+  );
+}

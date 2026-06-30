@@ -48,6 +48,10 @@ export class PrismaCoachRepository implements ICoachRepository {
     return this.prisma.coach.create({ data: data as never });
   }
 
+  async update(id: string, data: Record<string, unknown>) {
+    return this.prisma.coach.update({ where: { id }, data: data as never });
+  }
+
   async softDelete(id: string) {
     await this.prisma.coach.update({ where: { id }, data: { deletedAt: new Date() } });
   }
@@ -106,6 +110,14 @@ export class PrismaStandingRepository implements IStandingRepository {
     });
   }
 
+  async update(id: string, data: Record<string, unknown>) {
+    return this.prisma.standing.update({ where: { id }, data: data as never });
+  }
+
+  async softDelete(id: string) {
+    await this.prisma.standing.update({ where: { id }, data: { deletedAt: new Date() } });
+  }
+
   async recalculate(championshipId: string) {
     // Placeholder — recálculo completo em partida finalizada
     void championshipId;
@@ -125,6 +137,22 @@ export class PrismaGoalRepository implements IGoalRepository {
 
   async create(data: Record<string, unknown>) {
     return this.prisma.goal.create({ data: data as never });
+  }
+
+  async update(id: string, data: Record<string, unknown>) {
+    return this.prisma.goal.update({ where: { id }, data: data as never });
+  }
+
+  async softDelete(id: string) {
+    await this.prisma.goal.update({ where: { id }, data: { deletedAt: new Date() } });
+  }
+
+  async findAll() {
+    return this.prisma.goal.findMany({
+      where: { deletedAt: null },
+      include: { player: { include: { team: true } }, match: true },
+      orderBy: { createdAt: 'desc' },
+    });
   }
 
   async getTopScorers(championshipId?: string) {

@@ -17,6 +17,7 @@ export interface Championship {
   status: 'DRAFT' | 'ACTIVE' | 'FINISHED';
   startDate?: string;
   endDate?: string;
+  slug?: string;
 }
 
 export interface Team {
@@ -48,14 +49,17 @@ export interface Match {
   awayTeamId: string;
   homeScore?: number;
   awayScore?: number;
-  status: 'SCHEDULED' | 'LIVE' | 'FINISHED';
+  status: 'SCHEDULED' | 'LIVE' | 'FINISHED' | 'CANCELLED';
   scheduledAt: string;
   roundId: string;
+  homeTeam?: { id: string; name: string };
+  awayTeam?: { id: string; name: string };
 }
 
 export interface Standing {
   id: string;
   teamId: string;
+  championshipId?: string;
   teamName: string;
   played: number;
   wins: number;
@@ -64,6 +68,15 @@ export interface Standing {
   goalsFor: number;
   goalsAgainst: number;
   points: number;
+}
+
+export interface Goal {
+  id: string;
+  minute: number;
+  playerId: string;
+  matchId: string;
+  player?: { id: string; name: string; team?: { name: string } };
+  match?: { id: string; homeTeam?: { name: string }; awayTeam?: { name: string } };
 }
 
 export interface PaginatedResponse<T> {

@@ -18,7 +18,22 @@ export class PrismaChampionshipRepository implements IChampionshipRepository {
   }
 
   async create(data: Record<string, unknown>) {
-    return this.prisma.championship.create({ data: data as never });
+    const championship = await this.prisma.championship.create({ data: data as never });
+    const baseSlug = String(data.name ?? 'campeonato')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+    const slug = `${baseSlug}-${championship.id.slice(0, 8)}`;
+    await this.prisma.inviteLink.create({
+      data: {
+        slug,
+        type: 'CHAMPIONSHIP',
+        championshipId: championship.id,
+      },
+    });
+    return championship;
   }
 
   async update(id: string, data: Record<string, unknown>) {

@@ -4,6 +4,7 @@ import {
   CoachesController,
   MatchesController,
   StandingsController,
+  GoalsController,
   StatisticsController,
   PublicController,
 } from './controllers/resource-controllers';
@@ -22,6 +23,7 @@ import {
     CoachesController,
     MatchesController,
     StandingsController,
+    GoalsController,
     StatisticsController,
     PublicController,
   ],
