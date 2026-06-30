@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Loader2 } from 'lucide-react';
 import { cn } from '@/utils/cn';
@@ -36,22 +37,36 @@ export function FigmaFormField({
   );
 }
 
-export function FigmaInput(props: React.InputHTMLAttributes<HTMLInputElement>) {
-  return <input className="liga-input-dark" {...props} />;
-}
+// ---- COMPONENTES CORRIGIDOS COM FORWARDREF ----
 
-export function FigmaSelect(props: React.SelectHTMLAttributes<HTMLSelectElement>) {
-  return (
-    <select
-      className="liga-input-dark appearance-none"
-      {...props}
-    />
-  );
-}
+export const FigmaInput = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
+  (props, ref) => {
+    return <input ref={ref} className="liga-input-dark" {...props} />;
+  }
+);
+FigmaInput.displayName = 'FigmaInput';
 
-export function FigmaTextarea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
-  return <textarea className="liga-input-dark min-h-[120px] resize-y" {...props} />;
-}
+export const FigmaSelect = forwardRef<HTMLSelectElement, React.SelectHTMLAttributes<HTMLSelectElement>>(
+  (props, ref) => {
+    return (
+      <select
+        ref={ref}
+        className="liga-input-dark appearance-none"
+        {...props}
+      />
+    );
+  }
+);
+FigmaSelect.displayName = 'FigmaSelect';
+
+export const FigmaTextarea = forwardRef<HTMLTextAreaElement, React.TextareaHTMLAttributes<HTMLTextAreaElement>>(
+  (props, ref) => {
+    return <textarea ref={ref} className="liga-input-dark min-h-[120px] resize-y" {...props} />;
+  }
+);
+FigmaTextarea.displayName = 'FigmaTextarea';
+
+// ------------------------------------------------
 
 export function FigmaFormActions({
   onCancel,
@@ -99,7 +114,7 @@ export function FigmaTableBody({ children }: { children: React.ReactNode }) {
 }
 
 export function FigmaTableRow({ children }: { children: React.ReactNode }) {
-  return <tr className="border-b border-white/5 transition hover:bg-white/5">{children}</tr>;
+  return <tr className="border-b border-white/5 transition hover:bg-white/5">{children}</tr>
 }
 
 export function FigmaTableCell({
