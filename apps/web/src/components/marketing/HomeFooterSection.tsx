@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { isAuthenticated } from '@/utils/auth';
 
 export function HomeFooterSection() {
+  const loggedIn = isAuthenticated();
   return (
     <footer id="contato" className="relative overflow-hidden bg-liga-navy">
       <div className="px-6 py-16 lg:px-12">
@@ -32,8 +34,14 @@ export function HomeFooterSection() {
             <p className="font-display text-sm font-bold uppercase text-white/50">Utilidades</p>
             <ul className="mt-4 space-y-2 font-display text-white/80">
               <li><a href="#campeonatos" className="hover:text-white">Ver competições</a></li>
-              <li><Link to="/register" className="hover:text-white">Criar conta</Link></li>
-              <li><Link to="/login" className="hover:text-white">Acessar conta</Link></li>
+              {loggedIn ? (
+                <li><Link to="/dashboard" className="hover:text-white">Minha conta</Link></li>
+              ) : (
+                <>
+                  <li><Link to="/register" className="hover:text-white">Criar conta</Link></li>
+                  <li><Link to="/login" className="hover:text-white">Acessar conta</Link></li>
+                </>
+              )}
             </ul>
           </div>
 

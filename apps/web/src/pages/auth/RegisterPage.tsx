@@ -2,6 +2,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Link, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { isAuthenticated } from '@/utils/auth';
 import { useMutation } from '@tanstack/react-query';
 import { Loader2 } from 'lucide-react';
 import { FigmaAuthShell } from '@/components/layout/FigmaAuthShell';
@@ -21,6 +23,11 @@ type FormData = z.infer<typeof schema>;
 
 export default function RegisterPage() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated()) navigate('/dashboard', { replace: true });
+  }, [navigate]);
+
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(schema),
   });

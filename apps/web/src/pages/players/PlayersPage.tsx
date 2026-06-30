@@ -24,14 +24,19 @@ export default function PlayersPage() {
 
   return (
     <div>
-      <AppPageHeader title="Atletas" description="Gerencie o elenco dos times." />
+      <AppPageHeader
+        title="Atletas"
+        description="Gerencie o elenco dos times."
+        actionTo="/players/new"
+        actionLabel="Novo atleta"
+      />
       {isError && <FigmaErrorBanner message="Erro ao carregar atletas." />}
       {!data?.length ? (
         <FigmaEmptyPanel
           title="Nenhum atleta cadastrado"
-          description="Cadastre atletas pela gestão do time."
-          actionLabel="Ver times"
-          actionTo="/teams"
+          description="Cadastre o primeiro atleta do seu time."
+          actionLabel="Cadastrar atleta"
+          actionTo="/players/new"
         />
       ) : (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>

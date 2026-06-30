@@ -13,7 +13,9 @@ const TeamsPage = lazy(() => import('@/pages/teams/TeamsPage'));
 const CreateTeamPage = lazy(() => import('@/pages/teams/CreateTeamPage'));
 const TeamManagementPage = lazy(() => import('@/pages/teams/TeamManagementPage'));
 const PlayersPage = lazy(() => import('@/pages/players/PlayersPage'));
+const CreatePlayerPage = lazy(() => import('@/pages/players/CreatePlayerPage'));
 const CoachesPage = lazy(() => import('@/pages/coaches/CoachesPage'));
+const CreateCoachPage = lazy(() => import('@/pages/coaches/CreateCoachPage'));
 const MatchesPage = lazy(() => import('@/pages/matches/MatchesPage'));
 const StandingsPage = lazy(() => import('@/pages/standings/StandingsPage'));
 const TopScorersPage = lazy(() => import('@/pages/standings/TopScorersPage'));
@@ -41,7 +43,9 @@ export const router = createBrowserRouter([
       { path: '/teams/new', element: <CreateTeamPage /> },
       { path: '/teams/:id', element: <TeamManagementPage /> },
       { path: '/players', element: <PlayersPage /> },
+      { path: '/players/new', element: <CreatePlayerPage /> },
       { path: '/coaches', element: <CoachesPage /> },
+      { path: '/coaches/new', element: <CreateCoachPage /> },
       { path: '/matches', element: <MatchesPage /> },
       { path: '/standings', element: <StandingsPage /> },
       { path: '/top-scorers', element: <TopScorersPage /> },

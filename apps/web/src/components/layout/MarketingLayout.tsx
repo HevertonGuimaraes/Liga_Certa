@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/utils/cn';
+import { isAuthenticated } from '@/utils/auth';
 
 const navLinks = [
   { href: '/#inicio', label: 'Inicio' },
@@ -15,7 +16,8 @@ interface MarketingHeaderProps {
 
 export function MarketingHeader({ variant = 'transparent' }: MarketingHeaderProps) {
   const location = useLocation();
-  const isAuth = location.pathname.startsWith('/login') || location.pathname.startsWith('/register');
+  const loggedIn = isAuthenticated();
+  const isAuthPage = location.pathname.startsWith('/login') || location.pathname.startsWith('/register');
 
   return (
     <header
@@ -40,12 +42,21 @@ export function MarketingHeader({ variant = 'transparent' }: MarketingHeaderProp
           ))}
         </nav>
 
-        <Link
-          to={isAuth ? '/login' : '/login'}
-          className="rounded-xl bg-liga-blue px-5 py-2.5 font-body text-base font-medium text-white transition hover:bg-liga-blue/90"
-        >
-          Acessar conta
-        </Link>
+        {loggedIn ? (
+          <Link
+            to="/dashboard"
+            className="rounded-xl bg-liga-blue px-5 py-2.5 font-body text-base font-medium text-white transition hover:bg-liga-blue/90"
+          >
+            Minha conta
+          </Link>
+        ) : (
+          <Link
+            to={isAuthPage ? '/register' : '/login'}
+            className="rounded-xl bg-liga-blue px-5 py-2.5 font-body text-base font-medium text-white transition hover:bg-liga-blue/90"
+          >
+            {isAuthPage ? 'Criar conta' : 'Acessar conta'}
+          </Link>
+        )}
       </div>
     </header>
   );

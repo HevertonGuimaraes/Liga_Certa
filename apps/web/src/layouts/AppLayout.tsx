@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import { cn } from '@/utils/cn';
+import { clearAuthToken, getAuthToken } from '@/utils/auth';
 import { AppPageBackground, MarketingHeader } from '@/components/layout/MarketingLayout';
 
 function isNavActive(pathname: string, to: string) {
@@ -41,7 +42,7 @@ export function AppLayout() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleLogout = () => {
-    localStorage.removeItem('liga_certa_token');
+    clearAuthToken();
     window.location.href = '/login';
   };
 
@@ -107,7 +108,7 @@ export function AppLayout() {
 }
 
 export function ProtectedRoute({ children }: { children: React.ReactNode }) {
-  const token = localStorage.getItem('liga_certa_token');
+  const token = getAuthToken();
   if (!token) return <Navigate to="/login" replace />;
   return <>{children}</>;
 }

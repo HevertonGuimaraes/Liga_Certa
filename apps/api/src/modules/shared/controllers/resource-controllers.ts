@@ -1,4 +1,4 @@
-import { Controller, Get, Param, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Query, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import {
   PrismaPlayerRepository,
@@ -8,6 +8,19 @@ import {
 } from '../repositories/prisma-repositories';
 import { Prisma } from '@prisma/client';
 import { PrismaService } from '../../../infra/prisma/prisma.service';
+import { IsString, MinLength, MaxLength, IsUUID, IsInt, Min, Max } from 'class-validator';
+
+class CreatePlayerDto {
+  @IsString() @MinLength(2) name!: string;
+  @IsInt() @Min(1) @Max(99) number!: number;
+  @IsString() @MinLength(2) @MaxLength(50) position!: string;
+  @IsUUID() teamId!: string;
+}
+
+class CreateCoachDto {
+  @IsString() @MinLength(2) name!: string;
+  @IsUUID() teamId!: string;
+}
 
 type StandingWithTeam = Prisma.StandingGetPayload<{ include: { team: true } }>;
 
@@ -20,6 +33,11 @@ export class PlayersController {
   findAll() {
     return this.repo.findAll();
   }
+
+  @Post()
+  create(@Body() dto: CreatePlayerDto) {
+    return this.repo.create({ ...dto });
+  }
 }
 
 @Controller('coaches')
@@ -30,6 +48,11 @@ export class CoachesController {
   @Get()
   findAll() {
     return this.repo.findAll();
+  }
+
+  @Post()
+  create(@Body() dto: CreateCoachDto) {
+    return this.repo.create({ ...dto });
   }
 }
 
@@ -111,6 +134,27 @@ export class StatisticsController {
 @Controller('public')
 export class PublicController {
   constructor(private readonly prisma: PrismaService) {}
+
+  @Get('championships')
+  async searchChampionships(@Query('q') q?: string) {
+    const search = q?.trim();
+    return this.prisma.championship.findMany({
+      where: {
+        deletedAt: null,
+        ...(search ? { name: { contains: search } } : {}),
+      },
+      orderBy: { createdAt: 'desc' },
+      take: search ? 20 : 6,
+      select: {
+        id: true,
+        name: true,
+        season: true,
+        status: true,
+        startDate: true,
+        endDate: true,
+      },
+    });
+  }
 
   @Get(':slug')
   async getBySlug(@Param('slug') slug: string) {

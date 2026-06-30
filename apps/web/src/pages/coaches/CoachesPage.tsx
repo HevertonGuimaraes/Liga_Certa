@@ -15,10 +15,20 @@ export default function CoachesPage() {
 
   return (
     <div>
-      <AppPageHeader title="Técnicos" description="Equipe técnica dos times." />
+      <AppPageHeader
+        title="Técnicos"
+        description="Equipe técnica dos times."
+        actionTo="/coaches/new"
+        actionLabel="Novo técnico"
+      />
       {isError && <FigmaErrorBanner message="Erro ao carregar técnicos." />}
       {!data?.length ? (
-        <FigmaEmptyPanel title="Nenhum técnico cadastrado" description="Associe técnicos aos times." actionTo="/teams" actionLabel="Ver times" />
+        <FigmaEmptyPanel
+          title="Nenhum técnico cadastrado"
+          description="Cadastre o técnico vinculado a um time."
+          actionTo="/coaches/new"
+          actionLabel="Cadastrar técnico"
+        />
       ) : (
         <FigmaPanel>
           <ul className="divide-y divide-white/10">
