@@ -40,7 +40,20 @@ export default function CreateChampionshipPage() {
     <div>
       <AppPageHeader title="Novo Campeonato" description="Preencha os dados para criar sua competição." />
       <FigmaPanel className="max-w-2xl">
-        <form onSubmit={handleSubmit((d) => mutation.mutate(d))} className="space-y-6">
+<form 
+  onSubmit={handleSubmit((d) => {
+    // Pegamos os dados do form e formatamos as duas datas para o padrão ISO que o Prisma exige
+    const formattedData = {
+      ...d,
+      startDate: d.startDate ? new Date(d.startDate).toISOString() : undefined,
+      endDate: d.endDate ? new Date(d.endDate).toISOString() : undefined,
+    };
+    
+    // Agora enviamos os dados corrigidos para a API
+    mutation.mutate(formattedData);
+  })} 
+  className="space-y-6"
+>
           <FigmaFormField label="Nome do campeonato" error={errors.name?.message}>
             <FigmaInput placeholder="Digite o nome do campeonato" {...register('name')} />
           </FigmaFormField>
