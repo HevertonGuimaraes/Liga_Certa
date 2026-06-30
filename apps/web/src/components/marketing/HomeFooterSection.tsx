@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { isAuthenticated } from '@/utils/auth';
+import { LigaLogo } from '@/components/layout/LigaLogo';
 
 export function HomeFooterSection() {
   const loggedIn = isAuthenticated();
@@ -8,12 +9,7 @@ export function HomeFooterSection() {
       <div className="px-6 py-16 lg:px-12">
         <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-liga-blue font-display text-lg font-extrabold text-white">
-                LC
-              </div>
-              <span className="font-display text-2xl font-bold text-white">Liga Certa</span>
-            </div>
+            <LigaLogo imageClassName="h-14 sm:h-16" />
             <p className="mt-4 font-display text-white/60">
               O jeito mais fácil de criar e gerenciar campeonatos esportivos.
             </p>

@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/utils/cn';
 import { isAuthenticated } from '@/utils/auth';
+import { LigaLogo } from '@/components/layout/LigaLogo';
 
 const navLinks = [
   { href: '/#inicio', label: 'Inicio' },
@@ -27,12 +28,7 @@ export function MarketingHeader({ variant = 'transparent' }: MarketingHeaderProp
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-liga-blue font-display text-lg font-extrabold text-white">
-            LC
-          </div>
-          <span className="font-display text-xl font-semibold text-white">Liga Certa</span>
-        </Link>
+        <LigaLogo imageClassName="h-11 sm:h-12" />
 
         <nav className="hidden items-center gap-8 xl:flex">
           {navLinks.map((link) => (
