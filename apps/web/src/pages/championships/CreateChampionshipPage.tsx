@@ -68,9 +68,6 @@ export default function CreateChampionshipPage() {
               <FigmaInput type="date" {...register('endDate')} />
             </FigmaFormField>
           </div>
-                    <button type="submit" className="bg-blue-500 text-white p-2 rounded">
-            Testar Envio Real
-          </button>
           <FigmaFormActions
             onCancel={() => navigate(-1)}
             submitLabel="Criar campeonato"
